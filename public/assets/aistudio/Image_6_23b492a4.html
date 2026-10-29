@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-background": "#151c22", "surface-variant": "#dce3eb", "primary-fixed": "#c2e8fb", "inverse-on-surface": "#ebf1fa", "surface-tint": "#3e6373", "surface-dim": "#d4dbe3", "error-container": "#ffdad6", "on-primary-fixed": "#001f29", "on-secondary": "#ffffff", "secondary": "#006a63", "on-secondary-fixed-variant": "#00504a", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#254b5b", "background": "#f6faff", "tertiary-fixed": "#ffdbd1", "on-surface-variant": "#41484b", "on-surface": "#151c22", "tertiary-container": "#64200d", "primary": "#002531", "inverse-surface": "#2a3137", "secondary-fixed": "#90f4e9", "tertiary-fixed-dim": "#ffb5a1", "on-error": "#ffffff", "tertiary": "#460b00", "outline": "#72787c", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#7a2f1b", "surface-container": "#e8eff7", "surface-container-high": "#e2e9f1", "outline-variant": "#c1c7cb", "on-primary": "#ffffff", "on-primary-container": "#7fa5b7", "secondary-fixed-dim": "#73d7cd", "surface-bright": "#f6faff", "on-tertiary-fixed": "#3c0800", "primary-container": "#123b4a", "on-tertiary-container": "#e8856a", "surface-container-low": "#eef4fc", "secondary-container": "#90f4e9", "inverse-primary": "#a6ccdf", "surface": "#f6faff", "primary-fixed-dim": "#a6ccdf", "surface-container-highest": "#dce3eb", "on-secondary-container": "#007169", "on-error-container": "#93000a", "on-secondary-fixed": "#00201d" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "margin-tablet": "2rem", "margin": "3rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg": ["DM Sans"], "label-lg": ["DM Sans"], "headline-sm": ["DM Sans"], "display-hero-mobile": ["DM Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["DM Sans"], "body-sm": ["Inter"], "display-hero": ["DM Sans"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "headline-md": ["DM Sans"] }, fontSize: { "headline-lg": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-hero": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;background-color:#f6faff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-primary-container/95 backdrop-blur-xl pt-safe shadow-[0_2px_12px_rgba(18,59,74,0.12)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="TIDEKIND Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAesvU9XGLlfMRvG_tCeB5rh9UTk_k-JKN02Qdf_ZxhhlC-Lnt8i-eczMkp5DMXMgJq4SuwDBM9ma8_sdNDGmynW0OMmNj6DRvGpkPOTyb6TcjI6k8lodubYhXG9gpbGAZ9yiwuKBktLtL6S3QqJMx2De0oBmUtz20k69TX9of4pUAGmjtvp0Oa9AGN_utuYEqhze7anE_YvLTY1AZc1MfOZ_bRm89jBZ6AuKW_p0yQWadYU5xoi_Jp"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-secondary-fixed truncate">Pilot: Bali &amp; East Java, ID</span></div><span class="font-headline-sm text-headline-sm text-on-primary truncate">Home</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 rounded-full flex items-center justify-center text-on-primary/80 hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-2xl">notifications</span></button><button aria-label="User Profile" class="w-11 h-11 rounded-full flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaLLAttEB1chuHXNRefT20js_Qglrb_7-5feFWoLt8RxIHVS28TVWoHqOIbUnXtRIRig92BwToCM0RPtqYJgTXMoaE88FqBYe4KUdGDBydBz0sYhuxm1XsZ_ofde94YyeRyQnI887Ih-5gvJSumdyuxTPoVL9DJgeYFUJSWJgn10TBqzsvF_xESp__RDxpG5R_rH_dpSXbcHpHjoukyMOtQwbeDuyL6ab92VTPvpcf1diC6JBSlndN"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Toast Notification Component -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 opacity-0 pointer-events-none translate-y-[-10px] w-[90%] max-w-md" id="nav-toast">
+<div class="bg-primary-container text-on-primary px-space-md py-space-sm rounded-full shadow-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary-fixed shrink-0 text-xl" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label-sm text-label-sm truncate" id="toast-text">Opening screen...</span>
+</div>
+<span class="font-label-sm text-[10px] uppercase tracking-wider bg-secondary px-2 py-0.5 rounded-full text-on-secondary shrink-0">Simulator</span>
+</div>
+</div>
+<!-- Master Header Section -->
+<div class="px-margin-mobile pt-space-md pb-space-lg bg-surface">
+<div class="flex flex-col gap-space-xs">
+<!-- Status Badge & Scope -->
+<div class="flex items-center flex-wrap gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+          11 Connected Screens
+        </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">sailing</span>
+          Bali &amp; East Java Pilot
+        </span>
+</div>
+<!-- Main Screen Title -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight mt-1">
+        Prototype Navigator
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Complete interactive screen architecture &amp; end-to-end journey orchestrator for field trials.
+      </p>
+</div>
+<!-- Quick Search & Interactive Screen Filter -->
+<div class="mt-space-md relative">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant pointer-events-none text-xl">search</span>
+<input class="w-full h-12 pl-12 pr-10 rounded-full bg-surface-container text-on-surface placeholder:text-on-surface-variant/70 font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="screen-search" placeholder="Filter screens by title, role, or feature (e.g. AI, GPS, Sort)..." type="text"/>
+<button class="hidden absolute right-3 w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="clear-search">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Quick Category Jump Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-space-xs mt-2 no-scrollbar">
+<button class="filter-chip active-filter px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary whitespace-nowrap transition-all shadow-sm" data-category="all">
+          All Screens (11)
+        </button>
+<button class="filter-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant whitespace-nowrap transition-all hover:bg-surface-container-high" data-category="onboarding">
+          Onboarding
+        </button>
+<button class="filter-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant whitespace-nowrap transition-all hover:bg-surface-container-high" data-category="action">
+          Actions &amp; Projects
+        </button>
+<button class="filter-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant whitespace-nowrap transition-all hover:bg-surface-container-high" data-category="ai">
+          ShoreScan AI &amp; Reports
+        </button>
+<button class="filter-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant whitespace-nowrap transition-all hover:bg-surface-container-high" data-category="community">
+          Circularity &amp; Co-op
+        </button>
+</div>
+</div>
+</div>
+<!-- SECTION: Guided End-to-End User Journeys -->
+<div class="px-margin-mobile py-space-md bg-surface-container-low">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">route</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Guided User Journeys</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 Playbooks</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+      Tap any breadcrumb segment or play action below to walk through critical multi-screen workflows:
+    </p>
+<!-- Journeys Carousel / Stack -->
+<div class="flex flex-col gap-space-md">
+<!-- Journey 1 -->
+<div class="journey-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-label-sm text-label-sm font-bold">1</span>
+<span class="font-label-lg text-label-lg text-primary">New Member to First Action</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-bold">Recommended</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Ideal for new volunteers or harbor partners installing TIDEKIND for the first time.
+        </p>
+<!-- Stepper Breadcrumb Pills -->
+<div class="flex flex-wrap items-center gap-1.5 text-xs py-1">
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors" onclick="triggerScreenJump('Screen 1: Welcome &amp; Onboarding')">
+            1. Welcome
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors" onclick="triggerScreenJump('Screen 2: Home Dashboard')">
+            2. Home
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors" onclick="triggerScreenJump('Screen 4: Take Action Directory')">
+            3. Action Hub
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm hover:bg-primary-container transition-colors" onclick="triggerScreenJump('Screen 5: Project Details &amp; Registration')">
+            4. Join Project
+          </button>
+</div>
+</div>
+<!-- Journey 2 -->
+<div class="journey-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">2</span>
+<span class="font-label-lg text-label-lg text-primary">Physical AI Detection to Response</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Hardware Sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Demonstrates ESP32-CAM optical edge inference feeding regional muster boards.
+        </p>
+<!-- Stepper Breadcrumb Pills -->
+<div class="flex flex-wrap items-center gap-1.5 text-xs py-1">
+<button class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm hover:bg-secondary hover:text-on-secondary transition-colors" onclick="triggerScreenJump('Screen 6: ShoreScan AI Detector')">
+            1. ShoreScan AI
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors" onclick="triggerScreenJump('Screen 8: Community Reports &amp; Dossiers')">
+            2. Reports Dossier
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm hover:bg-primary-container transition-colors" onclick="triggerScreenJump('Screen 5: Project Details &amp; Registration')">
+            3. Net Sorting Muster
+          </button>
+</div>
+</div>
+<!-- Journey 3 -->
+<div class="journey-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-label-sm font-bold">3</span>
+<span class="font-label-lg text-label-lg text-primary">Citizen Sighting to Harbor Triage</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] font-bold">Hazard Log</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Field reporting of drifting polypropylene tangle with GPS coordinate logging.
+        </p>
+<!-- Stepper Breadcrumb Pills -->
+<div class="flex flex-wrap items-center gap-1.5 text-xs py-1">
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors" onclick="triggerScreenJump('Screen 7: Report Lost Ghost Gear')">
+            1. Report Gear
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors" onclick="triggerScreenJump('Screen 8: Community Reports &amp; Dossiers')">
+            2. Triage Dossier
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container transition-colors" onclick="triggerScreenJump('Screen 11: Steward Profile &amp; Activity Log')">
+            3. Field Salvage Log
+          </button>
+</div>
+</div>
+<!-- Journey 4 -->
+<div class="journey-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary/15 text-secondary flex items-center justify-center font-label-sm text-label-sm font-bold">4</span>
+<span class="font-label-lg text-label-lg text-primary">Circular Economy &amp; Net Exchange</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">Recycle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Connect local fishers to coastal polymer shredding lofts and trade-in incentives.
+        </p>
+<!-- Stepper Breadcrumb Pills -->
+<div class="flex flex-wrap items-center gap-1.5 text-xs py-1">
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container transition-colors" onclick="triggerScreenJump('Screen 3: Explore Map &amp; Directory')">
+            1. Explore Depot
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-primary-container transition-colors" onclick="triggerScreenJump('Screen 10: Repair &amp; Recycling Exchange')">
+            2. Recycling Exchange
+          </button>
+<span class="material-symbols-outlined text-outline text-xs">arrow_forward</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-secondary-container transition-colors" onclick="triggerScreenJump('Screen 9: Community Feed')">
+            3. Pellet Ledger
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION: Complete All-Screens Directory -->
+<div class="px-margin-mobile py-space-lg flex flex-col gap-space-xl">
+<!-- CATEGORY A: Onboarding & Discovery -->
+<div class="screen-group" data-category="onboarding">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-lg">explore</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">A. Onboarding &amp; Discovery</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Core Screens</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Screen 1 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="welcome onboarding intro get started">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-2xl">waving_hand</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 01</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">First Touch</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Welcome &amp; Onboarding</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Field role selector (Fisher, Diver, Citizen), pilot harbor picker (Sanur/Banyuwangi), and mission commitments.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">touch_app</span>
+<span>3-step setup</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 1: Welcome &amp; Onboarding')">
+<span>Launch Onboarding</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Screen 2 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="home dashboard low tide window pilot metrics">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center text-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-2xl">home</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 02</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold">Main Dashboard</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Home Dashboard</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Real-time Sanur low-tide recovery timer, verified 4.2T nylon recovered metric, urgent alert drawer, and daily actions.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">water_drop</span>
+<span>Live Tide Bar</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 2: Home Dashboard')">
+<span>Go to Home</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Screen 3 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="explore map directory radar gps coordinates drop off depots">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-2xl">map</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 03</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">Geospatial</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Explore Map &amp; Directory</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Interactive radar map covering Bali &amp; East Java straits, certified weigh stations, drop-off depots, and active dive buoys.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">pin_drop</span>
+<span>14 Coast Depots</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 3: Explore Map &amp; Directory')">
+<span>Open Explore Map</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CATEGORY B: Taking Action & Projects -->
+<div class="screen-group" data-category="action">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-lg">sailing</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">B. Taking Action &amp; Projects</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Core Screens</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Screen 4 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="take action directory pathways volunteer emergency protocol">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-2xl">add_alert</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 04</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold">Action Hub</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Take Action Directory</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                7 verified stewardship pathways: Emergency net snag dispatch, coastal sorting, dive retrieval, and gear sponsorship.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">verified</span>
+<span>7 Active Pathways</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 4: Take Action Directory')">
+<span>Open Action Hub</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Screen 5 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="project details registration kuta harbor net sorting berths safety volunteer muster">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">event_available</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 05</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">Operations</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Project Details &amp; Registration</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Kuta Harbor Net Sorting Drive details: Remaining volunteer berths, equipment requirements, safety briefs, and muster code.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">badge</span>
+<span>Muster Pass Ready</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 5: Project Details &amp; Registration')">
+<span>View Project Details</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CATEGORY C: Reporting & Physical AI (ShoreScan) -->
+<div class="screen-group" data-category="ai">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-lg">smart_toy</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">C. Reporting &amp; Physical AI (ShoreScan)</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Core Screens</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Screen 6 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="shorescan ai detector camera esp32 hardware edge telemetry polymer scan">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-primary text-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">videocam</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 06</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold">Physical AI</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">ShoreScan AI Detector</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                ESP32-CAM live viewfinder simulator, bounding box net detection (94.2% confidence), polymer breakdown, and Bluetooth edge sync.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">memory</span>
+<span>Edge Hardware Live</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 6: ShoreScan AI Detector')">
+<span>Open ShoreScan</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Screen 7 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="report lost ghost gear citizen report gps coordinates hazard level entanglement photo">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">report_problem</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 07</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">Field Intake</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Report Lost Ghost Gear</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Structured mobile logging flow: GPS auto-pinning, drift hazard severity, wildlife entanglement flags, and media upload.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">my_location</span>
+<span>Exif GPS Extraction</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary" onclick="triggerScreenJump('Screen 7: Report Lost Ghost Gear')">
+<span>File Gear Report</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Screen 8 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="community reports dossiers triage verified dive dispatch salvage status">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">folder_managed</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 08</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">Triage Dossier</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Community Reports &amp; Dossiers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Verified regional triage stream, AI confidence scores, salvage chain verification, and dispatch updates.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>9 Verified Sightings</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 8: Community Reports &amp; Dossiers')">
+<span>View Reports Hub</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CATEGORY D: Community & Circularity -->
+<div class="screen-group" data-category="community">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-lg">4k</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">D. Community &amp; Circularity</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Core Screens</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Screen 9 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="community feed harbor co-op stories updates volunteer crew discussions">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-2xl">forum</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 09</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">Harbor Feed</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Community Feed</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Local fishers union posts, high-res haul imagery, dive crew shoutouts, and pellet processing milestone updates.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">group</span>
+<span>142 Active Stewards</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 9: Community Feed')">
+<span>Open Feed</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Screen 10 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="repair recycling exchange net mending lofts shredders polymer trade in credit nylon">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-2xl">recycling</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 10</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold">Circularity</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Repair &amp; Recycling Exchange</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Coastal net shredder depots, certified gillnet repair workshops, recycled polymer pellet trade-ins, and gear trade incentives.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">currency_exchange</span>
+<span>Rp 8,500/kg Bounty</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 10: Repair &amp; Recycling Exchange')">
+<span>Open Exchange</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Screen 11 Card -->
+<div class="screen-card bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm transition-all hover:shadow-md" data-title="steward profile alex steward activity log salvage chain muster pass safety credentials">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Screen 11</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">Steward Pass</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary truncate mt-0.5">Steward Profile &amp; Activity Log</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Alex Steward (Tier 2 Harbor Champion), 320 kg total recovered nylon ledger, emergency beacon contacts, and QR muster badge.
+              </p>
+<div class="flex items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-base">military_tech</span>
+<span>Tier 2 Certified</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary-container" onclick="triggerScreenJump('Screen 11: Steward Profile &amp; Activity Log')">
+<span>View Profile</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Field Testing Architecture & Specifications Callout -->
+<div class="px-margin-mobile pb-space-xl">
+<div class="bg-primary-container text-on-primary rounded-DEFAULT p-space-md shadow-md relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-secondary/20 pointer-events-none blur-2xl"></div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-xl">electrical_services</span>
+<h4 class="font-label-lg text-label-lg text-secondary-fixed">Hardware Edge Architecture</h4>
+</div>
+<p class="font-body-sm text-body-sm text-inverse-on-surface">
+        Prototype screens 06 and 07 communicate with local ESP32-CAM nodes via Bluetooth Low Energy (BLE). All GPS coordinate points are formatted to WGS84 standard for Bali coastal maritime patrols.
+      </p>
+<div class="grid grid-cols-2 gap-space-xs mt-space-md pt-space-xs">
+<div class="bg-primary/50 p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-[11px] text-on-primary-container uppercase">Pilot Coverage</span>
+<span class="font-label-lg text-label-lg text-on-primary mt-0.5">85 km Coastline</span>
+</div>
+<div class="bg-primary/50 p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-[11px] text-on-primary-container uppercase">Offline Buffer</span>
+<span class="font-label-lg text-label-lg text-on-primary mt-0.5">48-Hr Indexed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FLOATING QUICK SWITCHER (Sticky 1-Tap Field Access) -->
+<div class="sticky bottom-4 z-40 px-margin-mobile w-full max-w-lg mx-auto pointer-events-auto">
+<div class="bg-primary text-on-primary p-2 rounded-full shadow-2xl flex items-center justify-between gap-1 backdrop-blur-lg">
+<button class="flex-1 py-2 px-2 rounded-full flex flex-col items-center justify-center hover:bg-primary-container transition-colors active:scale-95" onclick="triggerScreenJump('Screen 2: Home Dashboard')">
+<span class="material-symbols-outlined text-lg text-secondary-fixed">home</span>
+<span class="font-label-sm text-[10px] text-on-primary leading-tight mt-0.5">Home</span>
+</button>
+<button class="flex-1 py-2 px-2 rounded-full flex flex-col items-center justify-center hover:bg-primary-container transition-colors active:scale-95" onclick="triggerScreenJump('Screen 3: Explore Map &amp; Directory')">
+<span class="material-symbols-outlined text-lg text-secondary-fixed">explore</span>
+<span class="font-label-sm text-[10px] text-on-primary leading-tight mt-0.5">Radar Map</span>
+</button>
+<button class="flex-1 py-2 px-2 rounded-full flex flex-col items-center justify-center bg-secondary text-on-secondary shadow-sm active:scale-95" onclick="triggerScreenJump('Screen 4: Take Action Directory')">
+<span class="material-symbols-outlined text-lg">add_alert</span>
+<span class="font-label-sm text-[10px] uppercase font-bold tracking-wider leading-tight mt-0.5">Action</span>
+</button>
+<button class="flex-1 py-2 px-2 rounded-full flex flex-col items-center justify-center hover:bg-primary-container transition-colors active:scale-95" onclick="triggerScreenJump('Screen 6: ShoreScan AI Detector')">
+<span class="material-symbols-outlined text-lg text-secondary-fixed">videocam</span>
+<span class="font-label-sm text-[10px] text-on-primary leading-tight mt-0.5">ShoreScan</span>
+</button>
+<button class="flex-1 py-2 px-2 rounded-full flex flex-col items-center justify-center hover:bg-primary-container transition-colors active:scale-95" onclick="triggerScreenJump('Screen 8: Community Reports &amp; Dossiers')">
+<span class="material-symbols-outlined text-lg text-secondary-fixed">folder_managed</span>
+<span class="font-label-sm text-[10px] text-on-primary leading-tight mt-0.5">Dossiers</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Interactive Filter and Simulator Logic
+  function triggerScreenJump(screenName) {
+    const toast = document.getElementById('nav-toast');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+
+    toastText.innerText = 'Routing to ' + screenName + '...';
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    // Haptic simulation / vibration if supported
+    if (navigator.vibrate) {
+      navigator.vibrate(35);
+    }
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
+    }, 2400);
+  }
+
+  // Client-side instant filtering & search
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('screen-search');
+    const clearBtn = document.getElementById('clear-search');
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const screenCards = document.querySelectorAll('.screen-card');
+    const screenGroups = document.querySelectorAll('.screen-group');
+
+    function applyFilters() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      const activeChip = document.querySelector('.filter-chip.active-filter');
+      const activeCategory = activeChip ? activeChip.getAttribute('data-category') : 'all';
+
+      // Toggle clear button
+      if (query.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+
+      screenCards.forEach(card => {
+        const text = (card.getAttribute('data-title') || '').toLowerCase() + ' ' + card.innerText.toLowerCase();
+        const parentGroup = card.closest('.screen-group');
+        const cardCategory = parentGroup ? parentGroup.getAttribute('data-category') : '';
+
+        const matchesQuery = query === '' || text.includes(query);
+        const matchesCategory = activeCategory === 'all' || activeCategory === cardCategory;
+
+        if (matchesQuery && matchesCategory) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Hide empty groups
+      screenGroups.forEach(group => {
+        const visibleChildren = group.querySelectorAll('.screen-card:not(.hidden)');
+        if (visibleChildren.length === 0) {
+          group.classList.add('hidden');
+        } else {
+          group.classList.remove('hidden');
+        }
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilters);
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        applyFilters();
+        searchInput.focus();
+      });
+    }
+
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('active-filter', 'bg-primary-container', 'text-on-primary');
+          c.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        chip.classList.add('active-filter', 'bg-primary-container', 'text-on-primary');
+        chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        applyFilters();
+      });
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(18,59,74,0.08)]" data-active-classes="text-secondary font-semibold"><div class="flex items-center justify-between h-16 px-space-xs relative"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-2xl">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore" href="#"><span class="material-symbols-outlined text-2xl">explore</span><span class="font-label-sm text-label-sm">Explore</span></a><div class="flex-1 flex items-center justify-center"><a aria-label="Take Action" class="-top-5 relative w-14 h-14 rounded-full bg-secondary text-on-secondary shadow-[0_8px_18px_-4px_rgba(18,59,74,0.3)] flex flex-col items-center justify-center hover:bg-primary-container transition-all active:scale-95" data-path="take-action" href="#"><span class="material-symbols-outlined text-2xl">add_alert</span><span class="font-label-sm text-[10px] uppercase font-bold tracking-wider">Action</span></a></div><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-2xl">sailing</span><span class="font-label-sm text-label-sm">Projects</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="community" href="#"><span class="material-symbols-outlined text-2xl">group</span><span class="font-label-sm text-label-sm">Community</span></a></div></nav></body></html>

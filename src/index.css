@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #002531;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #123b4a;
+  --color-on-primary-container: #7fa5b7;
+  --color-primary-fixed: #c2e8fb;
+  --color-primary-fixed-dim: #a6ccdf;
+  --color-on-primary-fixed: #001f29;
+  --color-on-primary-fixed-variant: #254b5b;
+
+  --color-secondary: #006a63;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #90f4e9;
+  --color-on-secondary-container: #007169;
+  --color-secondary-fixed: #90f4e9;
+  --color-secondary-fixed-dim: #73d7cd;
+  --color-on-secondary-fixed: #00201d;
+  --color-on-secondary-fixed-variant: #00504a;
+
+  --color-tertiary: #460b00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #64200d;
+  --color-on-tertiary-container: #e8856a;
+  --color-tertiary-fixed: #ffdbd1;
+  --color-tertiary-fixed-dim: #ffb5a1;
+  --color-on-tertiary-fixed: #3c0800;
+  --color-on-tertiary-fixed-variant: #7a2f1b;
+
+  --color-surface: #f6faff;
+  --color-on-surface: #151c22;
+  --color-on-surface-variant: #41484b;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eef4fc;
+  --color-surface-container: #e8eff7;
+  --color-surface-container-high: #e2e9f1;
+  --color-surface-container-highest: #dce3eb;
+  --color-surface-variant: #dce3eb;
+  --color-surface-dim: #d4dbe3;
+  --color-surface-bright: #f6faff;
+  --color-surface-tint: #3e6373;
+
+  --color-inverse-surface: #2a3137;
+  --color-inverse-on-surface: #ebf1fa;
+  --color-inverse-primary: #a6ccdf;
+
+  --color-outline: #72787c;
+  --color-outline-variant: #c1c7cb;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-background: #f6faff;
+  --color-on-background: #151c22;
+
+  --font-headline: 'DM Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Hide scrollbars for chips and tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Cool Button FX & Tactile Animations */
+.btn-cool-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #006a63 0%, #004d48 100%);
+  color: #ffffff;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px 0 rgba(0, 106, 99, 0.35);
+}
+.btn-cool-primary:hover {
+  background: linear-gradient(135deg, #007c74 0%, #005b55 100%);
+  box-shadow: 0 6px 20px 0 rgba(0, 106, 99, 0.45);
+  transform: translateY(-1px);
+}
+.btn-cool-primary:active {
+  transform: scale(0.96) translateY(0);
+  box-shadow: 0 2px 8px 0 rgba(0, 106, 99, 0.3);
+}
+
+.btn-cool-glow {
+  position: relative;
+  background: #002531;
+  color: #90f4e9;
+  border: 1px solid rgba(144, 244, 233, 0.4);
+  box-shadow: 0 0 16px -2px rgba(144, 244, 233, 0.25);
+  transition: all 0.2s ease;
+}
+.btn-cool-glow:hover {
+  border-color: #90f4e9;
+  box-shadow: 0 0 24px 2px rgba(144, 244, 233, 0.45);
+  transform: translateY(-1px);
+}
+.btn-cool-glow:active {
+  transform: scale(0.96);
+}
+
+.btn-cool-accent {
+  background: linear-gradient(135deg, #90f4e9 0%, #73d7cd 100%);
+  color: #00201d;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(144, 244, 233, 0.4);
+  transition: all 0.2s ease;
+}
+.btn-cool-accent:hover {
+  box-shadow: 0 6px 18px rgba(144, 244, 233, 0.6);
+  transform: translateY(-1px);
+}
+.btn-cool-accent:active {
+  transform: scale(0.96);
+}
+
+/* Radar Sonar Wave Pulse */
+@keyframes sonar-wave {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+.animate-sonar {
+  animation: sonar-wave 2.2s cubic-bezier(0.1, 0.6, 0.3, 1) infinite;
+}
+
+/* Leaflet Container & Popup Resets for Mobile & Modern Theme */
+.leaflet-container {
+  font-family: var(--font-body) !important;
+  width: 100%;
+  height: 100%;
+  background: #001f29 !important;
+  border-radius: 1.5rem;
+}
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #151c22 !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 37, 49, 0.3) !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+.leaflet-popup-tip {
+  background: #ffffff !important;
+}
+

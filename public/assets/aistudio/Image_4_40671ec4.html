@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-background": "#151c22", "surface-variant": "#dce3eb", "primary-fixed": "#c2e8fb", "inverse-on-surface": "#ebf1fa", "surface-tint": "#3e6373", "surface-dim": "#d4dbe3", "error-container": "#ffdad6", "on-primary-fixed": "#001f29", "on-secondary": "#ffffff", "secondary": "#006a63", "on-secondary-fixed-variant": "#00504a", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#254b5b", "background": "#f6faff", "tertiary-fixed": "#ffdbd1", "on-surface-variant": "#41484b", "on-surface": "#151c22", "tertiary-container": "#64200d", "primary": "#002531", "inverse-surface": "#2a3137", "secondary-fixed": "#90f4e9", "tertiary-fixed-dim": "#ffb5a1", "on-error": "#ffffff", "tertiary": "#460b00", "outline": "#72787c", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#7a2f1b", "surface-container": "#e8eff7", "surface-container-high": "#e2e9f1", "outline-variant": "#c1c7cb", "on-primary": "#ffffff", "on-primary-container": "#7fa5b7", "secondary-fixed-dim": "#73d7cd", "surface-bright": "#f6faff", "on-tertiary-fixed": "#3c0800", "primary-container": "#123b4a", "on-tertiary-container": "#e8856a", "surface-container-low": "#eef4fc", "secondary-container": "#90f4e9", "inverse-primary": "#a6ccdf", "surface": "#f6faff", "primary-fixed-dim": "#a6ccdf", "surface-container-highest": "#dce3eb", "on-secondary-container": "#007169", "on-error-container": "#93000a", "on-secondary-fixed": "#00201d" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "margin-tablet": "2rem", "margin": "3rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg": ["DM Sans"], "label-lg": ["DM Sans"], "headline-sm": ["DM Sans"], "display-hero-mobile": ["DM Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["DM Sans"], "body-sm": ["Inter"], "display-hero": ["DM Sans"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "headline-md": ["DM Sans"] }, fontSize: { "headline-lg": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-hero": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;background-color:#f6faff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-primary-container/95 backdrop-blur-xl pt-safe shadow-[0_2px_12px_rgba(18,59,74,0.12)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="TIDEKIND Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAesvU9XGLlfMRvG_tCeB5rh9UTk_k-JKN02Qdf_ZxhhlC-Lnt8i-eczMkp5DMXMgJq4SuwDBM9ma8_sdNDGmynW0OMmNj6DRvGpkPOTyb6TcjI6k8lodubYhXG9gpbGAZ9yiwuKBktLtL6S3QqJMx2De0oBmUtz20k69TX9of4pUAGmjtvp0Oa9AGN_utuYEqhze7anE_YvLTY1AZc1MfOZ_bRm89jBZ6AuKW_p0yQWadYU5xoi_Jp"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-secondary-fixed truncate">Pilot: Bali &amp; East Java, ID</span></div><span class="font-headline-sm text-headline-sm text-on-primary truncate">Home</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 rounded-full flex items-center justify-center text-on-primary/80 hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-2xl">notifications</span></button><button aria-label="User Profile" class="w-11 h-11 rounded-full flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaLLAttEB1chuHXNRefT20js_Qglrb_7-5feFWoLt8RxIHVS28TVWoHqOIbUnXtRIRig92BwToCM0RPtqYJgTXMoaE88FqBYe4KUdGDBydBz0sYhuxm1XsZ_ofde94YyeRyQnI887Ih-5gvJSumdyuxTPoVL9DJgeYFUJSWJgn10TBqzsvF_xESp__RDxpG5R_rH_dpSXbcHpHjoukyMOtQwbeDuyL6ab92VTPvpcf1diC6JBSlndN"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Hub Header & Status Tracker Bar -->
+<section class="px-margin-mobile pt-space-sm pb-space-md">
+<div class="flex items-center justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Go Back" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors active:scale-95 shadow-sm" type="button">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Action Command Hub</span>
+<h1 class="font-headline-sm text-headline-sm text-primary">Tidekind Field Pathways</h1>
+</div>
+</div>
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow-sm active:scale-95 transition-all" id="toggle-activity-drawer" type="button">
+<span class="material-symbols-outlined text-base">fact_check</span>
+<span>My Activity</span>
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping ml-0.5"></span>
+</button>
+</div>
+<!-- Live Regional Pulse Strip -->
+<div class="p-space-md rounded-2xl bg-primary-container text-on-primary shadow-md relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-32 h-32 rounded-full bg-secondary/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-secondary/30 flex items-center justify-center text-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-2xl">waves</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">Pilot: Bali &amp; East Java</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container truncate">Operational coastal net salvage grid</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-white block">340</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">Stewards</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs grid grid-cols-2 gap-space-xs text-center border-t-0 bg-primary/40 rounded-xl p-space-xs">
+<div class="flex flex-col py-1">
+<span class="font-label-lg text-label-lg text-secondary-fixed">18 Hubs</span>
+<span class="font-label-sm text-label-sm text-on-primary-container text-[11px]">Active Depots</span>
+</div>
+<div class="flex flex-col py-1">
+<span class="font-label-lg text-label-lg text-tertiary-fixed-dim">4.8 T</span>
+<span class="font-label-sm text-label-sm text-on-primary-container text-[11px]">Salvaged Nylon</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Search and Category Filter -->
+<section class="px-margin-mobile space-y-space-sm sticky top-16 z-30 bg-surface/95 backdrop-blur-md py-space-xs">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-xl">search</span>
+<input class="w-full h-12 pl-11 pr-10 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-sm focus:outline-none focus:ring-0 focus:shadow-md transition-shadow" id="action-search" placeholder="Search net salvage, depots, reporting..." type="text"/>
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" id="clear-search" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Category Pills Filter -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar text-nowrap">
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-secondary text-on-secondary shadow-sm transition-all active:scale-95" data-filter="all">
+        All Actions
+      </button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" data-filter="volunteer">
+        Volunteer
+      </button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" data-filter="fishers">
+        Fishers &amp; Depots
+      </button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" data-filter="partners">
+        Partners &amp; NGOs
+      </button>
+</div>
+</section>
+<!-- 7 Key Action Pathways List -->
+<section class="px-margin-mobile mt-space-sm space-y-space-md" id="actions-grid">
+<!-- Card 1: Find a Project -->
+<article class="action-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all" data-category="volunteer all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-2xl">sailing</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">Active in Bali &amp; East Java</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px]">3 Open Berths</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary mt-1">Find a Field Project</h2>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+        Join hands-on teams sorting ghost gear at Banyuwangi harbor, coastal dive surveys in Nusa Penida, or net line braiding workshops.
+      </p>
+<!-- Mini Project Preview Pill Strip -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-lg shrink-0">calendar_month</span>
+<span class="font-label-sm text-label-sm text-primary truncate">Next Tide: Sat, Jul 20 · Gilimanuk Depot</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold shrink-0">Free RSVP</span>
+</div>
+<div class="mt-space-md flex items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-outline">Level: Novice to Diver</span>
+<button class="px-5 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all active:scale-95 flex items-center gap-1" onclick="openModal('modal-find-project')" type="button">
+<span>Browse 12 Slots</span>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Report Ghost Gear (Urgent Hazard Priority) -->
+<article class="action-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all" data-category="volunteer fishers all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container/20 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-2xl">report_problem</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] uppercase tracking-wider font-bold">Safety Sensitive</span>
+<h2 class="font-headline-sm text-headline-sm text-primary mt-1">Report Ghost Gear</h2>
+</div>
+</div>
+</div>
+<!-- Critical Warning Banner -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-error-container/60 text-on-error-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-xl shrink-0 mt-0.5">health_and_safety</span>
+<div class="text-xs font-body-sm leading-snug">
+<strong>Do not enter water to untangle gear.</strong> Snags and sub-surface tides present severe drowning risks. Certified salvage squads deploy coordinates.
+        </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+        Spotted submerged nets, trailing longlines, or abandoned fish traps near reefs? Upload a coordinate or photo timestamp for rapid verification.
+      </p>
+<div class="mt-space-md flex items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-outline">Avg dispatch: 4 hrs</span>
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary transition-all active:scale-95 flex items-center gap-1.5" onclick="openModal('modal-report-gear')" type="button">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-lg">add_location_alt</span>
+<span>Open Hazard Logger</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Find Repair or Recycling Support -->
+<article class="action-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all" data-category="fishers all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed/50 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-2xl">autorenew</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px]">Resource Exchange</span>
+<h2 class="font-headline-sm text-headline-sm text-primary mt-1">Net Repair &amp; Recycling</h2>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+        Locate artisanal net mending lofts, drop off end-of-life gillnets at coastal shredder stations, or purchase salvaged twine spools.
+      </p>
+<!-- Depot Facility Visual Grid -->
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs">
+<div class="p-space-xs rounded-xl bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">precision_manufacturing</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[12px] text-primary truncate">Banyuwangi Shredder</span>
+<span class="text-[10px] text-outline">Open Daily · Free Entry</span>
+</div>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">handyman</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[12px] text-primary truncate">Kusamba Mending Loft</span>
+<span class="text-[10px] text-outline">4 Master Riggers</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-outline">Drop-off incentive: Rp 4k/kg</span>
+<button class="px-5 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all active:scale-95 flex items-center gap-1" onclick="openModal('modal-repair-recycling')" type="button">
+<span>View Map &amp; Rates</span>
+<span class="material-symbols-outlined text-base">map</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Log My Contribution -->
+<article class="action-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all" data-category="volunteer fishers all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-2xl">scale</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">Instant Steward Credits</span>
+<h2 class="font-headline-sm text-headline-sm text-primary mt-1">Log My Contribution</h2>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+        Log field salvage weights, net meters mended, or beach triage hours to earn certified coastal stewardship badging and rewards.
+      </p>
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">verified</span>
+<span class="font-label-sm text-label-sm text-primary">Decentralized Verifier Quorum</span>
+</div>
+<span class="text-xs text-outline font-label-sm">Requires 1 Geo-Photo</span>
+</div>
+<div class="mt-space-md flex items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-outline">Verified under 24 hrs</span>
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary transition-all active:scale-95 flex items-center gap-1" onclick="openModal('modal-log-contribution')" type="button">
+<span>Log Gear Salvage</span>
+<span class="material-symbols-outlined text-base">post_add</span>
+</button>
+</div>
+</article>
+<!-- Card 5: Start a Community Initiative -->
+<article class="action-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all" data-category="volunteer partners all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">campaign</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px]">Civic &amp; School Grant</span>
+<h2 class="font-headline-sm text-headline-sm text-primary mt-1">Start an Initiative</h2>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+        Propose a school micro-recycling bin, launch an offshore harbor survey, or create local youth net-weaving workshops in your kelurahan.
+      </p>
+<div class="mt-space-md flex items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-outline">Micro-grants up to $500</span>
+<button class="px-5 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all active:scale-95 flex items-center gap-1" onclick="openModal('modal-community-initiative')" type="button">
+<span>Draft Proposal</span>
+<span class="material-symbols-outlined text-base">lightbulb</span>
+</button>
+</div>
+</article>
+<!-- Card 6: Become a Volunteer -->
+<article class="action-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all" data-category="volunteer all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-2xl">volunteer_activism</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px]">Free Onboarding</span>
+<h2 class="font-headline-sm text-headline-sm text-primary mt-1">Become a Volunteer</h2>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+        Take our quick 15-minute coastal safety pledge, pick your operational roles (Harbor Sorting, Boat Crew, or Community Outreach), and receive your Tidekind field pass.
+      </p>
+<div class="mt-space-md flex items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-outline">15 min video &amp; pledge</span>
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary transition-all active:scale-95 flex items-center gap-1" onclick="openModal('modal-volunteer-register')" type="button">
+<span>Join Movement</span>
+<span class="material-symbols-outlined text-base">how_to_reg</span>
+</button>
+</div>
+</article>
+<!-- Card 7: Partner With TIDEKIND -->
+<article class="action-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all" data-category="partners fishers all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">handshake</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px]">Institutions &amp; Co-ops</span>
+<h2 class="font-headline-sm text-headline-sm text-primary mt-1">Partner With TIDEKIND</h2>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+        Are you a fisher cooperative (KUB), marine NGO, university research lab, or industrial nylon polymer recycler? Integrate your operations into Tidekind.
+      </p>
+<div class="mt-space-md flex items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-outline">Direct Response &lt; 48 hrs</span>
+<button class="px-5 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all active:scale-95 flex items-center gap-1" onclick="openModal('modal-partner-inquiry')" type="button">
+<span>Inquire Now</span>
+<span class="material-symbols-outlined text-base">open_in_new</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Empty Search State -->
+<div class="hidden px-margin-mobile py-space-xl text-center" id="no-search-results">
+<div class="w-16 h-16 rounded-full bg-surface-container mx-auto flex items-center justify-center text-outline mb-space-sm">
+<span class="material-symbols-outlined text-3xl">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">No Matching Pathways</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs mx-auto">
+      Try searching for "net", "volunteer", "depot", or tap All Actions.
+    </p>
+<button class="mt-space-md px-5 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md" onclick="resetFilters()" type="button">
+      Reset Filters
+    </button>
+</div>
+<!-- FLOATING QUICK ACTIVITY DRAWER (Demo / Interactive state) -->
+<aside class="fixed inset-x-0 bottom-16 z-40 transform translate-y-full transition-transform duration-300 ease-out max-w-md mx-auto pointer-events-none" id="activity-drawer">
+<div class="mx-margin-mobile bg-surface-container-lowest rounded-t-2xl shadow-xl p-space-md pointer-events-auto border-t-0">
+<div class="w-10 h-1 bg-surface-container-highest rounded-full mx-auto mb-space-sm"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">My Activity Hub</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" id="close-activity-drawer" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="space-y-space-xs text-left max-h-60 overflow-y-auto pr-1">
+<!-- Log item 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-xl">fiber_manual_record</span>
+<div>
+<p class="font-label-md text-label-md text-primary">18.5 kg Monofilament Logged</p>
+<p class="font-body-sm text-body-sm text-outline text-xs">Serangan Harbor · Today 09:14</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px]">Verifying</span>
+</div>
+<!-- Log item 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-xl">done_all</span>
+<div>
+<p class="font-label-md text-label-md text-primary">Nusa Dua Drift Hazard Report</p>
+<p class="font-body-sm text-body-sm text-outline text-xs">Lat -8.8021, Long 115.234 · 2d ago</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[10px]">Resolved</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex gap-space-xs">
+<button class="flex-1 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md text-center" onclick="openModal('modal-log-contribution'); toggleDrawer(false);" type="button">
+          + New Contribution
+        </button>
+</div>
+</div>
+</aside>
+<!-- MODAL 1: FIND A PROJECT -->
+<div class="action-modal fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end justify-center p-0 md:items-center" id="modal-find-project">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-3xl md:rounded-3xl max-h-[777px] overflow-y-auto p-space-md shadow-2xl animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl">sailing</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Upcoming Field Projects</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeModal('modal-find-project')" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-2xl bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-xs">Dive &amp; Snorkel</span>
+<span class="text-xs text-outline font-label-sm">July 20 · 08:30 WITA</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-primary">Nusa Penida Manta Point Ghost Trap Clearance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Assisting local dive masters to locate and tag abandoned bamboo &amp; steel cage traps.</p>
+<div class="mt-2 flex items-center justify-between pt-1">
+<span class="font-label-sm text-xs text-secondary font-bold">2 berths remaining</span>
+<button class="px-4 py-1.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm" onclick="confirmAction('Enrolled for Nusa Penida Dive Clearance!')" type="button">Enroll</button>
+</div>
+</div>
+<div class="p-space-sm rounded-2xl bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-xs">Shore Sorting</span>
+<span class="text-xs text-outline font-label-sm">July 24 · 15:00 WITA</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-primary">Banyuwangi Port Net Shredding Drive</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Classifying reclaimed nylon 6 vs polypropylene ropes before granulation.</p>
+<div class="mt-2 flex items-center justify-between pt-1">
+<span class="font-label-sm text-xs text-secondary font-bold">8 berths open</span>
+<button class="px-4 py-1.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm" onclick="confirmAction('Enrolled for Banyuwangi Shredding Drive!')" type="button">Enroll</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL 2: REPORT GHOST GEAR (Interactive Form) -->
+<div class="action-modal fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end justify-center p-0 md:items-center" id="modal-report-gear">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-3xl md:rounded-3xl max-h-[795px] overflow-y-auto p-space-md shadow-2xl">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-2xl">warning</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Log Submerged/Drifting Gear</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeModal('modal-report-gear')" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<!-- Safety reminder banner -->
+<div class="p- space-sm rounded-xl bg-error-container text-on-error-container p-3 mb-space-sm text-xs font-body-sm">
+<strong>Safety Rule #1:</strong> Never attempt solo retrieval. Ghost gear can pull swimmers down without warning.
+      </div>
+<form class="space-y-space-sm" id="report-gear-form" onsubmit="handleGearReport(event)">
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Gear Category</label>
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" required="">
+<option value="">Select gear type...</option>
+<option value="gillnet">Heavy Monofilament Gillnet</option>
+<option value="trawl">Trawl / Purse Seine Snag</option>
+<option value="fad">Aggregating Device (FAD / Rumpon)</option>
+<option value="trap">Wire / Bamboo Fish Trap</option>
+<option value="rope">Mooring Line / Synthetic Rope Cluster</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">GPS Coordinates / Location</label>
+<div class="flex gap-2">
+<input class="flex-1 h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm font-mono text-xs focus:outline-none" id="gear-coords" type="text" value="-8.6705° S, 115.2126° E"/>
+<button class="px-3 rounded-xl bg-surface-container text-secondary font-label-sm text-xs flex items-center gap-1" onclick="detectGPS()" type="button">
+<span class="material-symbols-outlined text-base">my_location</span>
+              Pin
+            </button>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Depth &amp; Urgency</label>
+<div class="grid grid-cols-2 gap-2">
+<select class="h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Surface Drifting</option>
+<option>Reef Entangled (0-10m)</option>
+<option>Deep Submerged (&gt;10m)</option>
+</select>
+<select class="h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Wildlife Entangled</option>
+<option>Navigation Hazard</option>
+<option>Non-urgent / Grounded</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Photo Verification</label>
+<div class="p-space-sm rounded-xl bg-surface-container-low text-center flex flex-col items-center justify-center gap-1 cursor-pointer hover:bg-surface-container">
+<span class="material-symbols-outlined text-secondary text-2xl">add_a_photo</span>
+<span class="font-label-sm text-xs text-primary">Upload Watermark / GPS-tagged Image</span>
+<span class="text-[10px] text-outline">JPG, PNG under 15MB</span>
+</div>
+</div>
+<button class="w-full py-3 rounded-full bg-error text-on-error font-label-md text-label-md shadow-md active:scale-95 transition-transform flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Submit Urgent Report</span>
+</button>
+</form>
+</div>
+</div>
+<!-- MODAL 3: NET REPAIR & RECYCLING SUPPORT -->
+<div class="action-modal fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end justify-center p-0 md:items-center" id="modal-repair-recycling">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-3xl md:rounded-3xl max-h-[777px] overflow-y-auto p-space-md shadow-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl">autorenew</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Net Depots &amp; Drop-offs</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeModal('modal-repair-recycling')" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<!-- Guidance box -->
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-sm">
+<h4 class="font-label-md text-label-md text-primary mb-1">Current Buyback Guideline</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Cleaned nylon 6 netting receives Rp 4,500/kg credit redeemable for repair twine, floats, or mobile data top-up.</p>
+</div>
+<!-- Depots list -->
+<div class="space-y-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between">
+<div>
+<h5 class="font-label-md text-label-md text-primary">Serangan Community Shredder</h5>
+<p class="text-xs text-outline">Jalan Tukad, Denpasar Selatan · +62 812-3921-990</p>
+<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold">Nylon 6 &amp; Polypropylene</span>
+</div>
+<button class="p-2 rounded-full bg-secondary text-on-secondary" onclick="confirmAction('Navigation directions launched for Serangan')" type="button">
+<span class="material-symbols-outlined text-base">directions</span>
+</button>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between">
+<div>
+<h5 class="font-label-md text-label-md text-primary">Banyuwangi Harbor Co-op Loft</h5>
+<p class="text-xs text-outline">Ketapang Pier East · Net Mending Stations</p>
+<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">Master Riggers on Duty</span>
+</div>
+<button class="p-2 rounded-full bg-secondary text-on-secondary" onclick="confirmAction('Navigation directions launched for Banyuwangi')" type="button">
+<span class="material-symbols-outlined text-base">directions</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL 4: LOG MY CONTRIBUTION -->
+<div class="action-modal fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end justify-center p-0 md:items-center" id="modal-log-contribution">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-3xl md:rounded-3xl max-h-[777px] overflow-y-auto p-space-md shadow-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl">scale</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Log Salvage or Mending</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeModal('modal-log-contribution')" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<form class="space-y-space-sm" id="log-contrib-form" onsubmit="handleContribLog(event)">
+<div class="grid grid-cols-2 gap-space-xs">
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Kilograms Net</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="e.g. 14.5" required="" step="0.5" type="number"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Meters Mended</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="e.g. 30" type="number"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Activity Location</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="e.g. Kusamba Beach or Sanur Reef" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Photo of Scale / Work (Required)</label>
+<div class="p-space-sm rounded-xl bg-surface-container-low text-center flex flex-col items-center justify-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-2xl">cloud_upload</span>
+<span class="font-label-sm text-xs text-primary">Upload Field Proof Photo</span>
+</div>
+</div>
+<button class="w-full py-3 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-md active:scale-95 transition-transform" type="submit">
+          Submit for Hub Verifier Quorum
+        </button>
+</form>
+</div>
+</div>
+<!-- MODAL 5: START COMMUNITY INITIATIVE -->
+<div class="action-modal fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end justify-center p-0 md:items-center" id="modal-community-initiative">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-3xl md:rounded-3xl max-h-[777px] overflow-y-auto p-space-md shadow-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl">lightbulb</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Propose Civic Initiative</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeModal('modal-community-initiative')" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<form class="space-y-space-sm" onsubmit="handleProposalSubmit(event)">
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Initiative Title</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="e.g. Jimbaran High School Net Mending Lab" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Target Community / Harbor</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="Kelurahan / Port location" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Brief Proposal (200 words)</label>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="Outline your goals, equipment needs, and estimated community members involved..." rows="3"></textarea>
+</div>
+<button class="w-full py-3 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-md active:scale-95 transition-transform" type="submit">
+          Submit Grant Proposal
+        </button>
+</form>
+</div>
+</div>
+<!-- MODAL 6: BECOME A VOLUNTEER (Orientation Pledge) -->
+<div class="action-modal fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end justify-center p-0 md:items-center" id="modal-volunteer-register">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-3xl md:rounded-3xl max-h-[777px] overflow-y-auto p-space-md shadow-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl">volunteer_activism</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Volunteer Registration</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeModal('modal-volunteer-register')" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-2xl bg-surface-container-low">
+<h4 class="font-label-md text-label-md text-primary mb-1">Tidekind Safety Orientation Pledge</h4>
+<ul class="text-xs text-on-surface-variant space-y-1 list-disc list-inside">
+<li>I will never free-dive to loosen heavy entangled ropes without a dive knife and certified buddy.</li>
+<li>I will wear protective cut-resistant gloves during onshore sorting and cutting.</li>
+<li>I will prioritize marine life release over net preservation.</li>
+</ul>
+</div>
+<form class="space-y-space-sm" onsubmit="handleVolunteerPledge(event)">
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Full Legal Name</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="As written in KTP / Passport" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Phone / WhatsApp</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="+62 812..." required="" type="tel"/>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<input class="w-5 h-5 rounded text-secondary focus:ring-0" id="pledge-check" required="" type="checkbox"/>
+<label class="text-xs font-label-sm text-primary" for="pledge-check">I accept the field safety code &amp; protocol.</label>
+</div>
+<button class="w-full py-3 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-md active:scale-95 transition-transform" type="submit">
+            Complete Registration &amp; Get Pass
+          </button>
+</form>
+</div>
+</div>
+</div>
+<!-- MODAL 7: PARTNER WITH TIDEKIND -->
+<div class="action-modal fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end justify-center p-0 md:items-center" id="modal-partner-inquiry">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-3xl md:rounded-3xl max-h-[777px] overflow-y-auto p-space-md shadow-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl">handshake</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Partner Organization Inquiry</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeModal('modal-partner-inquiry')" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<form class="space-y-space-sm" onsubmit="handlePartnerSubmit(event)">
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Organization Type</label>
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" required="">
+<option value="">Select partner entity type...</option>
+<option>Fisher Cooperative (KUB)</option>
+<option>Marine NGO / Conservation Trust</option>
+<option>Commercial Recycler / Polymer Fabricator</option>
+<option>Academic / Oceanographic Lab</option>
+<option>Harbor Port Authority</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Organization Name</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="Entity name" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary mb-1">Official Contact Email</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="contact@domain.org" required="" type="email"/>
+</div>
+<button class="w-full py-3 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-md active:scale-95 transition-transform" type="submit">
+          Submit Partnership Docket
+        </button>
+</form>
+</div>
+</div>
+<!-- TOAST FEEDBACK ALERT -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-primary-container text-on-primary px-4 py-2.5 rounded-full shadow-lg font-label-md text-label-md flex items-center gap-2 pointer-events-none opacity-0 transition-opacity duration-300" id="action-toast">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+<span id="toast-message">Action processed successfully!</span>
+</div>
+</div>
+<script>
+  // Filter switching
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const actionCards = document.querySelectorAll('.action-card');
+  const searchInput = document.getElementById('action-search');
+  const clearSearchBtn = document.getElementById('clear-search');
+  const emptyState = document.getElementById('no-search-results');
+
+  let activeFilter = 'all';
+
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    clearSearchBtn.classList.toggle('hidden', query.length === 0);
+    let visibleCount = 0;
+
+    actionCards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category') || '';
+      const cardText = card.innerText.toLowerCase();
+
+      const matchesFilter = activeFilter === 'all' || cardCategory.includes(activeFilter);
+      const matchesSearch = query === '' || cardText.includes(query);
+
+      if (matchesFilter && matchesSearch) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      emptyState.classList.remove('hidden');
+    } else {
+      emptyState.classList.add('hidden');
+    }
+  }
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-secondary', 'text-on-secondary');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-secondary', 'text-on-secondary');
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+      activeFilter = btn.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', applyFilters);
+  clearSearchBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    applyFilters();
+  });
+
+  function resetFilters() {
+    searchInput.value = '';
+    activeFilter = 'all';
+    filterButtons.forEach((b, idx) => {
+      if (idx === 0) {
+        b.classList.add('bg-secondary', 'text-on-secondary');
+        b.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      } else {
+        b.classList.remove('bg-secondary', 'text-on-secondary');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      }
+    });
+    applyFilters();
+  }
+
+  // Drawer Toggle
+  const activityDrawer = document.getElementById('activity-drawer');
+  const toggleDrawerBtn = document.getElementById('toggle-activity-drawer');
+  const closeDrawerBtn = document.getElementById('close-activity-drawer');
+
+  function toggleDrawer(open) {
+    if (open) {
+      activityDrawer.classList.remove('translate-y-full');
+    } else {
+      activityDrawer.classList.add('translate-y-full');
+    }
+  }
+
+  toggleDrawerBtn.addEventListener('click', () => toggleDrawer(true));
+  closeDrawerBtn.addEventListener('click', () => toggleDrawer(false));
+
+  // Modal Handlers
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  // Toast notifier
+  function showToast(msg) {
+    const toast = document.getElementById('action-toast');
+    const toastMsg = document.getElementById('toast-message');
+    toastMsg.innerText = msg;
+    toast.classList.remove('opacity-0');
+    setTimeout(() => {
+      toast.classList.add('opacity-0');
+    }, 2800);
+  }
+
+  function confirmAction(msg) {
+    closeAllModals();
+    showToast(msg);
+  }
+
+  function closeAllModals() {
+    document.querySelectorAll('.action-modal').forEach(m => {
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+    });
+  }
+
+  function detectGPS() {
+    const input = document.getElementById('gear-coords');
+    input.value = '-8.7214° S, 115.1762° E (±4m)';
+    showToast('GPS coordinates locked to device sensor');
+  }
+
+  function handleGearReport(e) {
+    e.preventDefault();
+    closeModal('modal-report-gear');
+    showToast('Hazard logged! Alert dispatched to regional squad.');
+  }
+
+  function handleContribLog(e) {
+    e.preventDefault();
+    closeModal('modal-log-contribution');
+    showToast('Net log sent to Banyuwangi verifier quorum.');
+  }
+
+  function handleProposalSubmit(e) {
+    e.preventDefault();
+    closeModal('modal-community-initiative');
+    showToast('Proposal docket #TK-842 created successfully.');
+  }
+
+  function handleVolunteerPledge(e) {
+    e.preventDefault();
+    closeModal('modal-volunteer-register');
+    showToast('Pledge confirmed! Welcome aboard Tidekind.');
+  }
+
+  function handlePartnerSubmit(e) {
+    e.preventDefault();
+    closeModal('modal-partner-inquiry');
+    showToast('Partnership proposal submitted.');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(18,59,74,0.08)]" data-active-classes="text-secondary font-semibold"><div class="flex items-center justify-between h-16 px-space-xs relative"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-2xl">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore" href="#"><span class="material-symbols-outlined text-2xl">explore</span><span class="font-label-sm text-label-sm">Explore</span></a><div class="flex-1 flex items-center justify-center"><a aria-label="Take Action" class="-top-5 relative w-14 h-14 rounded-full bg-secondary text-on-secondary shadow-[0_8px_18px_-4px_rgba(18,59,74,0.3)] flex flex-col items-center justify-center hover:bg-primary-container transition-all active:scale-95" data-path="take-action" href="#"><span class="material-symbols-outlined text-2xl">add_alert</span><span class="font-label-sm text-[10px] uppercase font-bold tracking-wider">Action</span></a></div><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-2xl">sailing</span><span class="font-label-sm text-label-sm">Projects</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="community" href="#"><span class="material-symbols-outlined text-2xl">group</span><span class="font-label-sm text-label-sm">Community</span></a></div></nav></body></html>

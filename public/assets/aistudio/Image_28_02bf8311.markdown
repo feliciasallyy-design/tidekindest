@@ -1,0 +1,221 @@
+---
+name: Tidekind Oceanic Stewardship
+colors:
+  surface: '#f6faff'
+  surface-dim: '#d4dbe3'
+  surface-bright: '#f6faff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eef4fc'
+  surface-container: '#e8eff7'
+  surface-container-high: '#e2e9f1'
+  surface-container-highest: '#dce3eb'
+  on-surface: '#151c22'
+  on-surface-variant: '#41484b'
+  inverse-surface: '#2a3137'
+  inverse-on-surface: '#ebf1fa'
+  outline: '#72787c'
+  outline-variant: '#c1c7cb'
+  surface-tint: '#3e6373'
+  primary: '#002531'
+  on-primary: '#ffffff'
+  primary-container: '#123b4a'
+  on-primary-container: '#7fa5b7'
+  inverse-primary: '#a6ccdf'
+  secondary: '#006a63'
+  on-secondary: '#ffffff'
+  secondary-container: '#90f4e9'
+  on-secondary-container: '#007169'
+  tertiary: '#460b00'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#64200d'
+  on-tertiary-container: '#e8856a'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#c2e8fb'
+  primary-fixed-dim: '#a6ccdf'
+  on-primary-fixed: '#001f29'
+  on-primary-fixed-variant: '#254b5b'
+  secondary-fixed: '#90f4e9'
+  secondary-fixed-dim: '#73d7cd'
+  on-secondary-fixed: '#00201d'
+  on-secondary-fixed-variant: '#00504a'
+  tertiary-fixed: '#ffdbd1'
+  tertiary-fixed-dim: '#ffb5a1'
+  on-tertiary-fixed: '#3c0800'
+  on-tertiary-fixed-variant: '#7a2f1b'
+  background: '#f6faff'
+  on-background: '#151c22'
+  surface-variant: '#dce3eb'
+typography:
+  display-hero:
+    fontFamily: DM Sans
+    fontSize: 52px
+    fontWeight: '700'
+    lineHeight: 60px
+    letterSpacing: -0.02em
+  display-hero-mobile:
+    fontFamily: DM Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 42px
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: DM Sans
+    fontSize: 38px
+    fontWeight: '700'
+    lineHeight: 46px
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: DM Sans
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 34px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: DM Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 30px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: DM Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 26px
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  label-lg:
+    fontFamily: DM Sans
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: DM Sans
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 18px
+    letterSpacing: 0.01em
+  label-sm:
+    fontFamily: DM Sans
+    fontSize: 12px
+    fontWeight: '700'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+rounded:
+  sm: 0.5rem
+  DEFAULT: 1rem
+  md: 1.5rem
+  lg: 2rem
+  xl: 3rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 3rem
+  margin-tablet: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+The design system embodies a modern, community-driven environmental ethos: authoritative yet deeply welcoming, grounded, and purpose-driven. Built for a multi-faceted user base—spanning commercial fishers, local volunteers, research scientists, and civic partners—the design balances maritime utility with human warmth. 
+
+The aesthetic is a hybrid of Modern Clean and Tactile Environmentalism:
+- Generous, breathable layouts anchored by crisp maritime geometry.
+- Organic softness expressed through warm neutral backdrops and gentle pill-shaped interactive triggers.
+- Utilitarian precision for reporting coordinates, salvage data, and gear classifications.
+- High ethical transparency, avoiding visual gimmickry in favor of clarity, directness, and immediate legibility under outdoor sun or wet field conditions.
+
+## Colors
+
+The palette draws directly from coastlines, ocean depths, and maritime materials:
+
+- **Primary (`#123B4A` - Deep Ocean Navy):** The bedrock tone. Applied to major typographic anchors, primary navigations, critical status headers, and authoritative containers.
+- **Secondary (`#168C83` - Marine Teal):** The functional engine. Applied to primary calls to action, completed progress bars, active filters, and interactive highlights.
+- **Tertiary (`#F08B70` - Coral Accent):** The alert and focus trigger. Reserved for urgent gear hazard warnings, critical map cluster highlights, abandoned net danger flags, and pending verification badges.
+- **Surface Accents & Neutrals:**
+  - `Canvas (`#F7F6F0` - Warm Off-White)`: Primary page background, eliminating stark glare and introducing organic warmth.
+  - `Surface Alt (`#E8DDC8` - Sand Beige)`: Structured cards, elevated panels, and border accents.
+  - `Muted Accent (`#B8DCCB` - Sea-Glass Green)`: Positive recovery confirmations, safe-status tags, and soft supportive chips.
+  - `On-Surface (`#22292F` - Dark Charcoal)`: High-contrast body copy maintaining AA/AAA compliance against sand and off-white backdrops.
+
+## Typography
+
+The type scale combines the modern geometric precision of **DM Sans** for displays and UI controls with the high-legibility mechanical clarity of **Inter** for long-form data, field reports, and narrative content.
+
+- **Display & Headlines:** Headings use heavy optical weights (`600` and `700`) to provide instant structure across dense mapping feeds, field log summaries, and reporting dashboards. Tight negative tracking keeps larger text punchy and unified.
+- **Body & Data:** Inter runs across all narrative content and field reporting inputs. Normal letter spacing ensures effortless readability when scanning net classifications, GPS coordinates, or coastal depth metrics.
+- **Labels & Micro-copy:** Uppercase or semi-bold micro-copy (`label-sm`) enforces immediate recognition for field metrics (e.g., `EST. WEIGHT`, `DEPTH: 12M`, `HAZARD LEVEL`) without cluttering visual hierarchy.
+
+## Layout & Spacing
+
+The layout is built upon an adaptive 12-column fluid grid system engineered for field utility, responsive map panels, and multi-tiered dashboards:
+
+- **Desktop (1024px+):** 12 columns, `margin` of `3rem`, `gutter` of `1.5rem`. Max container width spans `1280px` for optimal reading width and controlled data density.
+- **Tablet (768px - 1023px):** 8 columns, `margin-tablet` of `2rem`, `gutter` of `1.5rem`. Modular cards collapse from 3-up to 2-up configurations.
+- **Mobile (<768px):** 4 columns, `margin-mobile` of `1rem`, `gutter-mobile` of `1rem`. Secondary controls collapse into sticky floating bottom sheets or bottom navigation drawers for thumb accessibility in marine field conditions.
+
+Layouts emphasize vertical flow with ample breathing room (`space-lg` to `space-xl`) between narrative thematic blocks, while data tables and gear tracking cards leverage compact intra-component gaps (`space-xs` and `space-sm`) to maximize screen utility.
+
+## Elevation & Depth
+
+Visual hierarchy is maintained via natural ambient light and soft physical layering rather than dramatic digital drop shadows:
+
+- **Level 0 (Flat Ground):** Page background `#F7F6F0`. No shadow.
+- **Level 1 (Card & Content Surface):** `#FFFFFF` or `#E8DDC8` at 40% tint. Outlined with a soft `#22292F` stroke at 8% opacity. Elevation shadow: `0 2px 6px -1px rgba(18, 59, 74, 0.05), 0 1px 3px -1px rgba(18, 59, 74, 0.03)`.
+- **Level 2 (Popovers, Sticky Controls & Active Cards):** Outlined with subtle stone borders. Elevation shadow: `0 8px 18px -4px rgba(18, 59, 74, 0.08), 0 3px 6px -2px rgba(18, 59, 74, 0.04)`.
+- **Level 3 (Modals & Gear Incident Drawers):** Backdrop dim of `#123B4A` at 35% blur opacity. Elevation shadow: `0 20px 32px -8px rgba(18, 59, 74, 0.16)`.
+
+## Shapes
+
+The design system adopts a **pill-shaped** form factor for primary actionable items combined with soft, humanized radii for structural containers. 
+
+- **Interactive Elements (Buttons, Badges, Search Bars, Sliders):** Full pill rounding (`9999px`) provides a friendly, welcoming touch experience that contrasts crisply against sharp data tables and photographic content.
+- **Surfaces & Cards:** Radius of `1rem` (`16px`) creates gentle boundaries that avoid clinical harshness.
+- **Nested Inner Modules (Photo thumbnails, map preview windows):** Scaled down proportionally to `0.5rem` (`8px`) to preserve structural alignment.
+
+## Components
+
+### Buttons
+- **Primary Action:** Solid `#168C83` (Marine Teal) background, `#FFFFFF` text, fully pill-shaped (`rounded-full`), minimum 44px height for touch targets. Hover state shifts to `#123B4A` with smooth transition.
+- **Secondary Action:** Outlined `#123B4A` border (1.5px), `#123B4A` text, transparent background. Hover state introduces a 6% tint of `#168C83`.
+- **Urgent / Hazard Alert:** Solid `#F08B70` (Coral) background, `#FFFFFF` text, reserved for "Report Lost Gear" or "Critical Hazard Logged" triggers.
+
+### Chips & Status Badges
+- **Safe / Recovered:** `#B8DCCB` background with `#123B4A` text.
+- **High Risk / Ghost Net Alert:** `#F08B70` background at 15% opacity with solid `#D95338` text.
+- **In-Progress Retrieval:** Soft `#168C83` at 12% opacity with `#168C83` text.
+- Built with `label-sm` typography, `space-xs` vertical padding, and `space-sm` horizontal padding.
+
+### Form Inputs & Selectors
+- **Input Fields:** Warm white `#FFFFFF` surface with a subtle `1px` `#E8DDC8` border. On focus, transitions to a 2px `#168C83` ring with zero vertical displacement. Minimum height `48px` to ensure effortless field input on mobile devices.
+- **Checkboxes & Radios:** Rounded `4px` (checkboxes) and full circle (radios), sized `20px` by `20px` within an expanded `44px` invisible tap container. Active state fills with `#168C83` featuring an SVG white check.
+
+### Cards & Reporting Logs
+- **Ghost Gear Sightings Card:** Base `#FFFFFF` background, layered with an outer border of `#E8DDC8`. Includes visual location tags, timestamp, reporter role badge, and a top-right coral accent indicator if gear is reported as drifting or actively entangling marine wildlife.
+
+### Additional Domain Components
+- **Coordinate Badge:** Monospaced coordinate visualizer inside a `#E8DDC8` (30% opacity) pill container with an instant "Copy Lat/Long" tap interaction.
+- **Recovery Progress Gauge:** Multi-segment bar visualizing target retrieval metrics, filling sequentially from `#B8DCCB` through `#168C83`.

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-background": "#151c22", "surface-variant": "#dce3eb", "primary-fixed": "#c2e8fb", "inverse-on-surface": "#ebf1fa", "surface-tint": "#3e6373", "surface-dim": "#d4dbe3", "error-container": "#ffdad6", "on-primary-fixed": "#001f29", "on-secondary": "#ffffff", "secondary": "#006a63", "on-secondary-fixed-variant": "#00504a", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#254b5b", "background": "#f6faff", "tertiary-fixed": "#ffdbd1", "on-surface-variant": "#41484b", "on-surface": "#151c22", "tertiary-container": "#64200d", "primary": "#002531", "inverse-surface": "#2a3137", "secondary-fixed": "#90f4e9", "tertiary-fixed-dim": "#ffb5a1", "on-error": "#ffffff", "tertiary": "#460b00", "outline": "#72787c", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#7a2f1b", "surface-container": "#e8eff7", "surface-container-high": "#e2e9f1", "outline-variant": "#c1c7cb", "on-primary": "#ffffff", "on-primary-container": "#7fa5b7", "secondary-fixed-dim": "#73d7cd", "surface-bright": "#f6faff", "on-tertiary-fixed": "#3c0800", "primary-container": "#123b4a", "on-tertiary-container": "#e8856a", "surface-container-low": "#eef4fc", "secondary-container": "#90f4e9", "inverse-primary": "#a6ccdf", "surface": "#f6faff", "primary-fixed-dim": "#a6ccdf", "surface-container-highest": "#dce3eb", "on-secondary-container": "#007169", "on-error-container": "#93000a", "on-secondary-fixed": "#00201d" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "margin-tablet": "2rem", "margin": "3rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg": ["DM Sans"], "label-lg": ["DM Sans"], "headline-sm": ["DM Sans"], "display-hero-mobile": ["DM Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["DM Sans"], "body-sm": ["Inter"], "display-hero": ["DM Sans"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "headline-md": ["DM Sans"] }, fontSize: { "headline-lg": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-hero": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;background-color:#f6faff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-primary-container/95 backdrop-blur-xl pt-safe shadow-[0_2px_12px_rgba(18,59,74,0.12)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="TIDEKIND Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAesvU9XGLlfMRvG_tCeB5rh9UTk_k-JKN02Qdf_ZxhhlC-Lnt8i-eczMkp5DMXMgJq4SuwDBM9ma8_sdNDGmynW0OMmNj6DRvGpkPOTyb6TcjI6k8lodubYhXG9gpbGAZ9yiwuKBktLtL6S3QqJMx2De0oBmUtz20k69TX9of4pUAGmjtvp0Oa9AGN_utuYEqhze7anE_YvLTY1AZc1MfOZ_bRm89jBZ6AuKW_p0yQWadYU5xoi_Jp"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-secondary-fixed truncate">Pilot: Bali &amp; East Java, ID</span></div><span class="font-headline-sm text-headline-sm text-on-primary truncate">Home</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 rounded-full flex items-center justify-center text-on-primary/80 hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-2xl">notifications</span></button><button aria-label="User Profile" class="w-11 h-11 rounded-full flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaLLAttEB1chuHXNRefT20js_Qglrb_7-5feFWoLt8RxIHVS28TVWoHqOIbUnXtRIRig92BwToCM0RPtqYJgTXMoaE88FqBYe4KUdGDBydBz0sYhuxm1XsZ_ofde94YyeRyQnI887Ih-5gvJSumdyuxTPoVL9DJgeYFUJSWJgn10TBqzsvF_xESp__RDxpG5R_rH_dpSXbcHpHjoukyMOtQwbeDuyL6ab92VTPvpcf1diC6JBSlndN"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin-mobile pb-space-xl">
+<!-- Top Navigation & Reports Counter Bar -->
+<div class="flex items-center justify-between py-space-sm">
+<button class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors py-space-xs" type="button">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+<span class="font-label-md text-label-md">Home / Actions</span>
+</button>
+<button class="inline-flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-variant text-primary px-space-md py-space-xs rounded-full shadow-sm transition-all active:scale-95" id="toggleDrawerBtn" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">inventory_2</span>
+<span class="font-label-md text-label-md font-semibold">My Reports (2)</span>
+</button>
+</div>
+<!-- Safety Warning Banner -->
+<div class="mt-space-sm bg-tertiary-container/10 p-space-md rounded-lg shadow-sm flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error/15 text-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-sm text-label-sm text-error uppercase tracking-wider mb-space-xs">Critical Safety Standard</p>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+        Do not enter the water or attempt to recover submerged or hazardous gear yourself. Reports are safely prioritized, reviewed by coordinators, and assigned to certified maritime recovery divers.
+      </p>
+</div>
+</div>
+<!-- Main Multi-Step Form Container -->
+<form class="mt-space-lg flex flex-col gap-space-lg" id="gearReportForm" onsubmit="event.preventDefault(); window.handleSubmitReport();">
+<!-- Step 1: Gear Classification -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">1</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Type of Ghost Gear</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Required</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select the primary material or entanglement structure sighted:</p>
+<div class="grid grid-cols-2 gap-space-xs mt-space-xs" id="gearTypeSelector">
+<button class="gear-pill active bg-secondary text-on-secondary py-space-sm px-space-md rounded-full font-label-md text-label-md text-left flex items-center justify-between shadow-sm transition-all" onclick="window.selectGearType(this, 'Net (Gillnet / Trammel)')" type="button">
+<span class="truncate">Net (Gillnet / Trammel)</span>
+<span class="material-symbols-outlined text-sm">check</span>
+</button>
+<button class="gear-pill bg-surface-container text-on-surface py-space-sm px-space-md rounded-full font-label-md text-label-md text-left flex items-center justify-between shadow-sm transition-all hover:bg-surface-variant" onclick="window.selectGearType(this, 'Trap / Crab Pot')" type="button">
+<span class="truncate">Trap / Crab Pot</span>
+<span class="material-symbols-outlined text-sm opacity-0">check</span>
+</button>
+<button class="gear-pill bg-surface-container text-on-surface py-space-sm px-space-md rounded-full font-label-md text-label-md text-left flex items-center justify-between shadow-sm transition-all hover:bg-surface-variant" onclick="window.selectGearType(this, 'Heavy Line / Poly Ropes')" type="button">
+<span class="truncate">Heavy Line / Ropes</span>
+<span class="material-symbols-outlined text-sm opacity-0">check</span>
+</button>
+<button class="gear-pill bg-surface-container text-on-surface py-space-sm px-space-md rounded-full font-label-md text-label-md text-left flex items-center justify-between shadow-sm transition-all hover:bg-surface-variant" onclick="window.selectGearType(this, 'Longline Monofilament')" type="button">
+<span class="truncate">Longline Monofilament</span>
+<span class="material-symbols-outlined text-sm opacity-0">check</span>
+</button>
+<button class="gear-pill col-span-2 bg-surface-container text-on-surface py-space-sm px-space-md rounded-full font-label-md text-label-md text-left flex items-center justify-between shadow-sm transition-all hover:bg-surface-variant" onclick="window.selectGearType(this, 'Other / Unidentified')" type="button">
+<span class="truncate">Other / Unidentified Marine Debris</span>
+<span class="material-symbols-outlined text-sm opacity-0">check</span>
+</button>
+</div>
+<input id="selectedGearType" type="hidden" value="Net (Gillnet / Trammel)"/>
+</div>
+<!-- Step 2: Estimated Condition -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">2</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Estimated Condition</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">How is the gear behaving in the marine environment?</p>
+<div class="flex flex-col gap-space-xs mt-space-xs" id="conditionSelector">
+<label class="condition-option flex items-center gap-space-sm p-space-md rounded-lg bg-surface-container cursor-pointer transition-all" onclick="window.selectCondition('snagged')">
+<div class="w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-xs">
+<span class="material-symbols-outlined text-xs">done</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-md text-label-md text-on-surface">Submerged &amp; Snagged</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Anchored to reef, bommie, or seafloor structure</span>
+</div>
+</label>
+<label class="condition-option flex items-center gap-space-sm p-space-md rounded-lg bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container" onclick="window.selectCondition('stranded')">
+<div class="w-5 h-5 rounded-full bg-surface-variant flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-xs">done</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-md text-label-md text-on-surface">Washed Ashore / Stranded</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Resting in intertidal zone, rocks, or mangrove fringe</span>
+</div>
+</label>
+<label class="condition-option flex items-center gap-space-sm p-space-md rounded-lg bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container" onclick="window.selectCondition('floating')">
+<div class="w-5 h-5 rounded-full bg-surface-variant flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-xs">done</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-md text-label-md text-on-surface">Floating Debris</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Actively drifting with tidal current or surface swell</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Step 3: Marine Location & GPS -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">3</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Sighting Location</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-sm">my_location</span> GPS Ready
+        </span>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden shadow-xs">
+<div class="w-full h-full bg-cover bg-center" data-location="Sanur Reef, Denpasar, Bali, Indonesia" style=""></div>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] flex items-center justify-center">
+<div class="flex flex-col items-center animate-bounce">
+<span class="material-symbols-outlined text-4xl text-error drop-shadow-md" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="px-space-xs py-0.5 bg-primary text-on-primary font-label-sm text-[10px] rounded-full shadow-sm">Target Area</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-2 right-2 bg-primary-container/90 backdrop-blur-md px-space-sm py-1.5 rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-primary truncate">Sanur Reef Outer Sector</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-mono shrink-0">-8.689, 115.263</span>
+</div>
+</div>
+<div class="flex gap-space-xs mt-space-xs">
+<button class="flex-1 h-12 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-primary-container transition-all active:scale-95 shadow-sm" id="gpsBtn" onclick="window.triggerGPSDetect()" type="button">
+<span class="material-symbols-outlined text-lg">near_me</span>
+<span>Detect Current GPS</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface flex items-center justify-center shrink-0 shadow-sm transition-all" onclick="navigator.clipboard.writeText('-8.689, 115.263'); alert('Coordinates copied!');" title="Copy Coordinates" type="button">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="harborInput">Harbor, Reef, or Coastal Landmark Name</label>
+<input class="h-12 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-all placeholder:text-on-surface-variant/60" id="harborInput" placeholder="e.g. Padang Bai Outer Reef" type="text" value="Sanur Harbor, 420m ESE of Marine Channel Marker 4"/>
+</div>
+</div>
+<!-- Step 4: Observation Date & Time -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">4</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Date &amp; Time Observed</h2>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-space-sm py-space-xs rounded-full font-label-sm text-label-sm font-semibold flex items-center gap-1 active:scale-95 transition-all" onclick="window.setObservedToday()" type="button">
+<span class="material-symbols-outlined text-sm">schedule</span> Observed Today
+        </button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="obsDate">Observation Date</label>
+<input class="h-12 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-all" id="obsDate" type="date" value="2025-05-18"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="obsTime">Local Time</label>
+<input class="h-12 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-all" id="obsTime" type="time" value="09:45"/>
+</div>
+</div>
+</div>
+<!-- Step 5: Evidence & Photo Verification -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">5</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Photo &amp; Evidence Log</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">1 File Attached</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clear field imagery aids rapid dive team staging and line-cutter selection.</p>
+<!-- Attached Mock Photo Preview -->
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container-low rounded-lg shadow-xs">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Underwater photograph capturing thick green monofilament nylon ghost net ensnared across vibrant staghorn coral reef with tropical sea water and sun rays penetrating the ocean surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtoI3-5LWH_h5v5RZ5oKHYBE6RaLavGlxZ-YC0ZhgU6HZJHPfOYDV7bfqsQ60nmXFQ8-6UkijV4jqFhbtfg6r7zQE4Rq4MrfHE8XedQy5S4J_DaouZakp3-_v7zcGT1Sfj_A6b3qVKK9bK6oC1EOA_lf9DK9D5CSwPHfQTNqKa0G8KLmezlgIkFgIr1m4DgSFr_HS5r1_xISzTK0j8wnF3WiKtgK1Ehd_XZUW7VVhmUjwN8qFY-Y1y"/>
+<div class="absolute bottom-1 left-1 bg-primary/80 rounded-full px-1 text-[9px] text-on-primary font-mono">JPG</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">net_snag_sample.jpg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3.4 MB • High Definition GPS Exif</span>
+<span class="font-label-sm text-label-sm text-secondary">Verified by Device Sensors</span>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-variant text-on-surface-variant hover:text-error flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Drag & Drop Upload Zone -->
+<div class="border-dashed border-2 border-outline-variant/50 rounded-lg p-space-md flex flex-col items-center justify-center text-center bg-surface-container/30 hover:bg-surface-container/60 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-space-xs">
+<span class="material-symbols-outlined text-2xl">add_photo_alternate</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Add more images or video snippet</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Drag file or tap to snap from marine camera</span>
+</div>
+</div>
+<!-- Step 6: Description & Wildlife Threat Level -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">6</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Threat Assessment</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase">Urgent Sighting</span>
+</div>
+<!-- Wildlife Threat Toggle Card -->
+<div class="p-space-md rounded-lg bg-tertiary-container/10 flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-2xl text-on-tertiary-container mt-0.5" style="font-variation-settings: 'FILL' 1;">phishing</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Active Entanglement Hazard</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">High risk: Active sea turtle / manta / reef damage</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="threatToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:border-surface-dim after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-on-tertiary-container"></div>
+</label>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="gearNotes">Field Observation Notes</label>
+<textarea class="p-space-md rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-all placeholder:text-on-surface-variant/60 resize-none" id="gearNotes" rows="3">Dense mesh net wrapping approximately 6 meters across an active hard coral head. Moderate tidal surge present. Several small reef fish trapped, juvenile green sea turtle sighted feeding within 15 meters.</textarea>
+</div>
+</div>
+<!-- Step 7: Submitter / Coordinator Contact Details -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">7</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Observer Details</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Signed In</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Contact Name</label>
+<input class="h-12 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" type="text" value="Alex Steward"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Email (Updates)</label>
+<input class="h-12 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" type="email" value="alex@tidekind.org"/>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span> Contact shared solely with regional recovery partners &amp; dive coordinators.
+      </p>
+</div>
+<!-- Step 8: Action Trigger -->
+<div class="pt-space-xs">
+<button class="w-full h-14 rounded-full bg-secondary hover:bg-primary text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center gap-space-sm shadow-md hover:shadow-lg transition-all active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-2xl">send</span>
+<span>Submit Report for Review</span>
+</button>
+<p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+        Dispatches instant dispatch beacon to Bali Coastal Operations Hub.
+      </p>
+</div>
+</form>
+<!-- Interactive Slide-out Drawer / Active Reports Overview Modal -->
+<div class="fixed inset-0 z-50 bg-primary-container/40 backdrop-blur-sm hidden flex-col justify-end" id="reportsDrawer">
+<div class="bg-surface-container-lowest rounded-t-xl max-h-[751px] flex flex-col overflow-hidden shadow-2xl">
+<!-- Drawer Handle & Header -->
+<div class="p-space-md flex flex-col border-b border-surface-container">
+<div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto mb-space-sm"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-2xl">sailing</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">My Active Reports</h3>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="window.toggleDrawer(false)" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+<!-- Reports List Body -->
+<div class="p-space-md overflow-y-auto flex flex-col gap-space-md">
+<!-- Item 1: Partner Contacted -->
+<div class="bg-surface-container-low p-space-md rounded-lg shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">TK-2025-079</span>
+<span class="px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-container text-on-secondary-container flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Partner Contacted
+            </span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Nusa Dua Coral Wall - Longline</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Assigned to Ocean Clean Bali Diver Unit 3. Deployment boat departure scheduled for tomorrow morning high tide.</p>
+<div class="flex items-center justify-between mt-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Logged: 2 days ago</span>
+<button class="text-secondary font-label-sm text-label-sm font-bold flex items-center gap-0.5" type="button">
+<span>View Log</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Under Review -->
+<div class="bg-surface-container-low p-space-md rounded-lg shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">TK-2025-081</span>
+<span class="px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Under Review
+            </span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Amed Outer Dropoff - Crab Pots</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Sighting telemetry confirmed. Regional coordinator validating vessel salvage clearance with harbor master.</p>
+<div class="flex items-center justify-between mt-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Logged: Yesterday, 16:30</span>
+<button class="text-secondary font-label-sm text-label-sm font-bold flex items-center gap-0.5" type="button">
+<span>View Log</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Drawer Bottom Dismiss -->
+<div class="p-space-md bg-surface-container-low">
+<button class="w-full h-12 rounded-full bg-surface-container-highest hover:bg-surface-variant font-label-md text-label-md text-on-surface transition-colors" onclick="window.toggleDrawer(false)" type="button">
+          Close Reports Panel
+        </button>
+</div>
+</div>
+</div>
+<!-- Confirmation Modal (Rendered on Submission) -->
+<div class="fixed inset-0 z-50 bg-primary-container/70 backdrop-blur-md hidden items-center justify-center p-space-md" id="confirmationModal">
+<div class="bg-surface-container-lowest max-w-sm w-full rounded-xl p-space-lg shadow-2xl flex flex-col items-center text-center animate-scale-up">
+<!-- Success Icon -->
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-space-md shadow-inner">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+<div class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-mono mb-space-xs">
+        Report #TK-2025-084
+      </div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Submitted for Review</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+        Thank you for safeguarding Bali's marine ecosystem. Your report has been dispatched directly to the <strong class="text-on-surface">Bali Coastal Hub Coordinator</strong>.
+      </p>
+<!-- Status Progress Snippet -->
+<div class="w-full bg-surface-container-low p-space-sm rounded-lg mt-space-md text-left flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Incident Status:</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span> Under Review
+          </span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-tight">
+          Assigned to certified recovery diver group: <span class="font-medium text-on-surface">Sanur Marine Patrol</span>
+</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col w-full gap-space-xs mt-space-lg">
+<button class="w-full h-12 rounded-full bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-95" onclick="window.trackCaseInReports()" type="button">
+<span class="material-symbols-outlined text-lg">timeline</span>
+<span>Track Case in My Reports</span>
+</button>
+<button class="w-full h-12 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs transition-all active:scale-95" onclick="window.resetForAnotherReport()" type="button">
+<span class="material-symbols-outlined text-lg">add_location_alt</span>
+<span>Report Another Location</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Gear Pill Selection Logic
+  window.selectGearType = function(button, typeName) {
+    const allPills = document.querySelectorAll('.gear-pill');
+    allPills.forEach(pill => {
+      pill.classList.remove('bg-secondary', 'text-on-secondary', 'active');
+      pill.classList.add('bg-surface-container', 'text-on-surface');
+      const icon = pill.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.add('opacity-0');
+    });
+
+    button.classList.add('bg-secondary', 'text-on-secondary', 'active');
+    button.classList.remove('bg-surface-container', 'text-on-surface');
+    const activeIcon = button.querySelector('.material-symbols-outlined');
+    if (activeIcon) activeIcon.classList.remove('opacity-0');
+
+    document.getElementById('selectedGearType').value = typeName;
+  };
+
+  // Condition Selector Logic
+  window.selectCondition = function(condition) {
+    const options = document.querySelectorAll('.condition-option');
+    options.forEach(opt => {
+      opt.classList.remove('bg-surface-container');
+      opt.classList.add('bg-surface-container-low');
+      const dot = opt.querySelector('div');
+      dot.classList.remove('bg-secondary', 'text-on-secondary');
+      dot.classList.add('bg-surface-variant', 'text-transparent');
+    });
+
+    const activeIndex = condition === 'snagged' ? 0 : condition === 'stranded' ? 1 : 2;
+    const target = options[activeIndex];
+    if (target) {
+      target.classList.remove('bg-surface-container-low');
+      target.classList.add('bg-surface-container');
+      const dot = target.querySelector('div');
+      dot.classList.add('bg-secondary', 'text-on-secondary');
+      dot.classList.remove('bg-surface-variant', 'text-transparent');
+    }
+  };
+
+  // Quick Observed Today Setter
+  window.setObservedToday = function() {
+    const today = new Date().toISOString().split('T')[0];
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const mins = String(now.getMinutes()).padStart(2, '0');
+    document.getElementById('obsDate').value = today;
+    document.getElementById('obsTime').value = `${hours}:${mins}`;
+  };
+
+  // Detect GPS Button Simulation
+  window.triggerGPSDetect = function() {
+    const btn = document.getElementById('gpsBtn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-lg animate-spin">refresh</span><span>Locating Marine Sensor...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-lg text-secondary-fixed">check_circle</span><span>Coordinates Locked: -8.689, 115.263</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 3000);
+    }, 800);
+  };
+
+  // Drawer Toggle
+  window.toggleDrawer = function(open) {
+    const drawer = document.getElementById('reportsDrawer');
+    if (open) {
+      drawer.classList.remove('hidden');
+      drawer.classList.add('flex');
+    } else {
+      drawer.classList.add('hidden');
+      drawer.classList.remove('flex');
+    }
+  };
+
+  document.getElementById('toggleDrawerBtn').addEventListener('click', () => {
+    window.toggleDrawer(true);
+  });
+
+  // Submit Handler -> Shows Confirmation
+  window.handleSubmitReport = function() {
+    const modal = document.getElementById('confirmationModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  };
+
+  // Post Submission Actions
+  window.trackCaseInReports = function() {
+    document.getElementById('confirmationModal').classList.add('hidden');
+    document.getElementById('confirmationModal').classList.remove('flex');
+    window.toggleDrawer(true);
+  };
+
+  window.resetForAnotherReport = function() {
+    document.getElementById('confirmationModal').classList.add('hidden');
+    document.getElementById('confirmationModal').classList.remove('flex');
+    document.getElementById('gearReportForm').reset();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(18,59,74,0.08)]" data-active-classes="text-secondary font-semibold"><div class="flex items-center justify-between h-16 px-space-xs relative"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-2xl">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore" href="#"><span class="material-symbols-outlined text-2xl">explore</span><span class="font-label-sm text-label-sm">Explore</span></a><div class="flex-1 flex items-center justify-center"><a aria-label="Take Action" class="-top-5 relative w-14 h-14 rounded-full bg-secondary text-on-secondary shadow-[0_8px_18px_-4px_rgba(18,59,74,0.3)] flex flex-col items-center justify-center hover:bg-primary-container transition-all active:scale-95" data-path="take-action" href="#"><span class="material-symbols-outlined text-2xl">add_alert</span><span class="font-label-sm text-[10px] uppercase font-bold tracking-wider">Action</span></a></div><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-2xl">sailing</span><span class="font-label-sm text-label-sm">Projects</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="community" href="#"><span class="material-symbols-outlined text-2xl">group</span><span class="font-label-sm text-label-sm">Community</span></a></div></nav></body></html>

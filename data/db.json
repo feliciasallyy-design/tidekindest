@@ -1,0 +1,531 @@
+{
+  "users": [
+    {
+      "id": "usr_alex_01",
+      "name": "Alex Stewart",
+      "email": "alex@tidekind.org",
+      "passwordHash": "36f4ff486b9422653c2b5866fb0505473943849c51093c8f9e1e688a1e7e1f6c9923b55914c4e7755a4cf3328dc24e21b735f18a34578e2605aeb50d65d7e745",
+      "salt": "d7863e15332ecd36f3fb693acb11802f",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGBruc0GzJvu5OSIyeTHg_qe5tBpOWGacXbzEsoTIWq0rvSvZ0xGZptOIa5MHGWua9c_bcTq8xNUnxJtpvXwy_laAdy_xnwMFNs2G9SoRtPRTai1aX0S5aW5zikduQ6AyjDe6U-4lmIAmQr3aWWJAv_F4wzdngt_Qr-rZz3lAIYpcQ6FnSk8c581dkADFK_ogc5xL6JUpghT-ak38TFeWH63aLJZPaPFW2Q1EB68B8YsoXARi5a1pR",
+      "bio": "Coastal gear recovery volunteer and drone scout operating between Sanur and Serangan Harbor.",
+      "location": "Denpasar, Bali",
+      "chapter": "Serangan Harbor Chapter",
+      "role": "Steward",
+      "badge": "Tier 2 Steward",
+      "stats": {
+        "gearDivertedKg": 340,
+        "hoursLogged": 18,
+        "projectsDone": 4,
+        "sortiesCount": 6
+      },
+      "createdAt": "2025-01-15T08:00:00Z"
+    },
+    {
+      "id": "usr_budi_02",
+      "name": "Pak Budi Santoso",
+      "email": "budi@tidekind.org",
+      "passwordHash": "931870b08e16d42c156ab2e8d956ba7adf03d6bd2d44a5cf3057eb25c632beec272792e4a8c5e9c8f444924d8594feae4a11a2e30dd4fa1fb17533b34d9c2c30",
+      "salt": "78932aaadb7df9354335433c72d4784a",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZncHLHM4J_XQwfPPfHKchwVEFgHy2TcsXg_KnbnSZqSYrAc7qw7UWn2KTul2ONpxodCfwuYoSN6oR8dVzWEXNs98Y7aQQfs2i9lFqzo6m06HS8Jki21-n2aFW47-bwIVJpeTbeQSUYf-mCQHSnepeRP-lScxmVWS2-JqdJkGnkx2y3NDcHjiNg6WnmFPcXXdfpnHqXQo3GHRFW1gAeLHgTGC2SSSxh74O9G4yAfHuEtXIipcx1CRT",
+      "bio": "Master net rigger & lead coordinator for Serangan fishing co-op circular mending depot.",
+      "location": "Serangan, Bali",
+      "chapter": "Serangan Harbor Dock 3",
+      "role": "Coordinator",
+      "badge": "Master Rigger",
+      "stats": {
+        "gearDivertedKg": 1280,
+        "hoursLogged": 92,
+        "projectsDone": 14,
+        "sortiesCount": 28
+      },
+      "createdAt": "2024-11-01T08:00:00Z"
+    },
+    {
+      "id": "usr_sarah_03",
+      "name": "Dr. Sarah Jenkins",
+      "email": "sarah@tidekind.org",
+      "passwordHash": "e005a8524120353cd4f51d92749ea4ebb6cf5a54f03f6330e10f3ebd58a7a5b8ae5d76f8433521fb9f6038036157a919a8be19b8997cae9465eb4240b7c2ed51",
+      "salt": "be8705d5d8df830086f43f1a495d2e35",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_JBXekM3H7wnv0VFjwh76I6mOUQiyqEr3ksBlP9wn709Kde3hQ31RE4LDKSU2a_8kupEcLvuHvVKRhR1BVJ6aaKswnnv2zb4lD3d5SFJgH-6Rgb-ryquVZ6RGwIqoWGO6WxboNWb_vIo6enOGcOtO_51I3r39nVr0Bo5FMFBnsngjfZ3H0GDsdzdu_M5t2IOx0q5T-jC25xAQ8jMLqyyfwKDOTaAIEpUV-ZN1ywYcmc6JioDJkvC",
+      "bio": "Marine biologist documenting coral recovery in the Sanur-Nusa Dua reef corridor.",
+      "location": "Sanur, Bali",
+      "chapter": "Sanur Coral Conservation",
+      "role": "Admin",
+      "badge": "Lead Scientist",
+      "stats": {
+        "gearDivertedKg": 490,
+        "hoursLogged": 45,
+        "projectsDone": 8,
+        "sortiesCount": 12
+      },
+      "createdAt": "2024-12-10T08:00:00Z"
+    },
+    {
+      "id": "usr_1793191828888_tjfh",
+      "name": "Captain Wayan Giri",
+      "email": "wayan@marine.id",
+      "passwordHash": "d33ebbf7fd7f6a42b5ec96ea6ed13b7fa5c451802b70201e49d8fa7afc7e2404f6a4bd3775625f2abea9152fb012e3b3db6aa35561d405c134629b2235cb8334",
+      "salt": "aed34f2c4f1fdc25e846bb57a697cbbd",
+      "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=wayan%40marine.id",
+      "bio": "Promoted to harbor dive lead.",
+      "location": "Sanur Port, Bali",
+      "chapter": "Sanur Marine Squad",
+      "role": "Steward",
+      "badge": "Tier 1 Steward",
+      "stats": {
+        "gearDivertedKg": 0,
+        "hoursLogged": 0,
+        "projectsDone": 0,
+        "sortiesCount": 0
+      },
+      "createdAt": "2026-10-28T12:50:28.888Z"
+    },
+    {
+      "id": "usr_1793191828945_c97e",
+      "name": "Dewi Lestari",
+      "email": "dewi@ocean.org",
+      "passwordHash": "5a76cb7757f430f99a01f830b011b374c1ebe386b3618878539efb3f6d05c105bcca6688617b10fdc5ffd2a9624d9392a35e70a9e30c98f8518255c56847f57b",
+      "salt": "36bdbdd1d781e3e5a2be5f986f164862",
+      "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=dewi%40ocean.org",
+      "bio": "Ocean conservation coordinator.",
+      "location": "Kuta Harbor, Bali",
+      "chapter": "Kuta Coral Care",
+      "role": "Steward",
+      "badge": "Tier 1 Steward",
+      "stats": {
+        "gearDivertedKg": 0,
+        "hoursLogged": 0,
+        "projectsDone": 1,
+        "sortiesCount": 0
+      },
+      "createdAt": "2026-10-28T12:50:28.945Z"
+    },
+    {
+      "id": "usr_1793239173529_lp65",
+      "name": "Felicia sallyy",
+      "email": "felicia.sallyy@gmail.com",
+      "passwordHash": "109d463cda66c139deb3a6f4362fb84852bedb5b20e940846a951f80c6cfe865b046d3a0371a351d87af0898f5f7abf6079a0bd4a53e605342b5e00047488dc4",
+      "salt": "6e06f4be08a19ee59ad92f5e0a20b8a0",
+      "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=felicia.sallyy%40gmail.com",
+      "bio": "Dedicated marine steward committed to reef protection and circular ghost gear recovery.",
+      "location": "Sanur, Bali, Indonesia",
+      "chapter": "Coastal Steward Chapter",
+      "role": "Steward",
+      "badge": "Tier 1 Steward",
+      "stats": {
+        "gearDivertedKg": 35,
+        "hoursLogged": 4,
+        "projectsDone": 1,
+        "sortiesCount": 2
+      },
+      "createdAt": "2026-10-29T01:59:33.529Z"
+    }
+  ],
+  "sessions": {
+    "acabc77e1b90941803df620bcdb94a2143a7ade6cf2df1296228fe181430f4e9": {
+      "userId": "usr_1793191828888_tjfh",
+      "expiresAt": 1795783828888
+    },
+    "94470d62d7fb44f710e570f1af6c15dd0a80ddddc5f7cb7105684d44042155dd": {
+      "userId": "usr_1793191828945_c97e",
+      "expiresAt": 1795783828945
+    },
+    "9eaaed6da96fc961c75baf1431ff61f68ad4203523fa29b019654c0c1b73d8f6": {
+      "userId": "usr_1793191828888_tjfh",
+      "expiresAt": 1795783829020
+    },
+    "580e343a80e8b7f8650acee68f8bce5d6a269c7f20bad4db1cc0b7434fafdf4f": {
+      "userId": "usr_alex_01",
+      "expiresAt": 1795830866632
+    },
+    "41c62b07e9e6bad9abc49826d6bdd7f1321af4baaafb660ad33eae9cbcec353a": {
+      "userId": "usr_1793239173529_lp65",
+      "expiresAt": 1795831173529
+    }
+  },
+  "resetTokens": {},
+  "reports": [
+    {
+      "id": "TK-2026-164",
+      "gearType": "Submerged Trawl Mesh 40m",
+      "condition": "Submerged & Snagged",
+      "locationName": "Sanur Outer Reef • Coral Zone",
+      "coords": "8.712° S, 115.265° E",
+      "date": "Today",
+      "time": "12.50 WITA",
+      "notes": "Heavy trawl net draped across 3 coral heads.",
+      "threatLevel": "High Entanglement Hazard",
+      "hasWildlifeEntanglement": false,
+      "status": "Under Review",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYD4lFIXMCvMZVB9y6qiCPwYvE8xV6J4J9FT5BEkIz3tdeu2FKGk53IKfR8Ky9zCi2MX1pIy2-5qTRs2BEzTsvYugCIabu_06mKx7Cmaqn2sNuNexcLmWjQPfnzKwNqeKBpJBvDTjsNwUymdN7lgiRQ4ScmZwQBrzYJRGDWrwK1gl0mRNfUYLcDt59uSlGT6KTFfZ1U1iEFFi0CW5MrxSRdZ2ydqD1KoIlXaD9AHS62o63TVbSJb2k",
+      "submittedAt": "Just now",
+      "confidence": "Field Verified",
+      "assignedTeam": "ShoreScan Triage Queue",
+      "creatorId": "usr_1793191828888_tjfh",
+      "creatorName": "Wayan Giri"
+    },
+    {
+      "id": "SS-2025-042",
+      "gearType": "Polypropylene Gillnet Segment",
+      "condition": "Washed Ashore / Stranded",
+      "locationName": "Sanur Sector 3 • Rock Jetty",
+      "coords": "8.7052° S, 115.2625° E",
+      "date": "Today",
+      "time": "10:14 WITA",
+      "notes": "Fragmented commercial mesh with secondary line entanglements. Dragging risk during incoming tide.",
+      "threatLevel": "Moderate Dragging Risk",
+      "hasWildlifeEntanglement": false,
+      "status": "Under Review",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYD4lFIXMCvMZVB9y6qiCPwYvE8xV6J4J9FT5BEkIz3tdeu2FKGk53IKfR8Ky9zCi2MX1pIy2-5qTRs2BEzTsvYugCIabu_06mKx7Cmaqn2sNuNexcLmWjQPfnzKwNqeKBpJBvDTjsNwUymdN7lgiRQ4ScmZwQBrzYJRGDWrwK1gl0mRNfUYLcDt59uSlGT6KTFfZ1U1iEFFi0CW5MrxSRdZ2ydqD1KoIlXaD9AHS62o63TVbSJb2k",
+      "submittedAt": "18 min ago",
+      "confidence": "91.4% Match",
+      "assignedTeam": "ShoreScan Automated Quorum (2 of 3 signed)",
+      "creatorId": "usr_alex_01",
+      "creatorName": "Alex Stewart"
+    },
+    {
+      "id": "TK-2025-081",
+      "gearType": "Heavy Braided Longline & Float",
+      "condition": "Submerged & Snagged",
+      "locationName": "Benoa Channel • Marker 4",
+      "coords": "8.7490° S, 115.2150° E",
+      "date": "Yesterday",
+      "time": "16:40 WITA",
+      "notes": "Subsurface mooring line drifting into turtle nesting corridor. Ensnared around mooring buoy tether.",
+      "threatLevel": "High Entanglement (Sea Turtle Hazard)",
+      "hasWildlifeEntanglement": true,
+      "status": "Action Planned",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCIcoWDOW_WzHmH3PODSPlArxc4xEXvmpfduVeHVsXQrmdJ1u63lBdDdGbIYsWm-vd_gMLPNnZG4JZJVTOaXYdKaCASD8IhHmt2O3BY6MmEepLlfri8S-G4I7O6d9MAS--oWd7gidSzjRsD18JPkZneskURyngYsnuXk4MXWYL--TbKisBRd3diDx1DLXCH7JY4nNKUTk4lrKt1jUepVU2QDaj4ufj6tXINPgaaB6m98u_X_NOaEFq3",
+      "submittedAt": "Yesterday, 16:40",
+      "confidence": "88.2% Edge Conf",
+      "assignedTeam": "Serangan Dive Recovery Team (Departing 06:30 AM Tomorrow)",
+      "creatorId": "usr_sarah_03",
+      "creatorName": "Dr. Sarah Jenkins"
+    },
+    {
+      "id": "TK-2025-076",
+      "gearType": "Abandoned Wire Crab Traps",
+      "condition": "Submerged & Snagged",
+      "locationName": "Kuta Harbor • Sector 3 Shelf",
+      "coords": "8.7214° S, 115.1762° E",
+      "date": "May 12",
+      "time": "09:15 WITA",
+      "notes": "3 commercial cage units recovered without marine life casualty. Transported to PT Daur Samudera depot.",
+      "threatLevel": "Ghost Fishing Risk Diverted",
+      "hasWildlifeEntanglement": false,
+      "status": "Verified & Salvaged",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAxuCCaIwzayFjPHA6ZbmB1-f8UaN7dOWMxVQRp9k-TbluDvXQhvLRI141lUXmmgzke06gUr7fVx0b3aOVPzityISNj79-YovUDT2n_BHQn6MdqljZHLGQUCOlhxQzP3-LSn2QOLXvlBmJpGqTfpIhGq6bQBX4TCILIG-TgFg8ey4XQz5Eu08lq2M94Wl8ofbbt7F0Pok1HktHdRLbJLWL43qk7ET92UEVPnBmJUPqI0M6yF6_fuh62",
+      "submittedAt": "3 days ago",
+      "confidence": "76.5% Edge Conf",
+      "assignedTeam": "PT Daur Samudera Depot (Cert #DSM-8831)",
+      "creatorId": "usr_budi_02",
+      "creatorName": "Pak Budi Santoso"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj_kuta_01",
+      "title": "Kuta Beach Shallow Reef Clearance",
+      "location": "Kuta Harbor • South Barrier Pier",
+      "date": "Sat, May 24 • 07:00 WITA",
+      "meetingPoint": "Kuta Lifeguard Tower 4",
+      "targetTonnage": "450 kg derelict netting",
+      "maxParticipants": 16,
+      "description": "Joint low-tide sweep targeting snagged polypropylene lines and trammel net fragments across 1.2km of shallow coral flats.",
+      "urgent": true,
+      "status": "Active Registration",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAd5Kx8lym9GTbQM6w61gM81ktjeG8h-SbXmvtc8Sf_SFCXmb8584NjpOT0iQKhDZrRKPfzXOsQQI8-kBB6thbrJc5qljOUInZJkupHNsPv5orZlJXZJYjBl7Nj64mQ4IoewT67_UFD2_MY_nTLMso1BvrLg_NnXgkBervJFt7585xhRlgQrMig9vcIfoRR8lDU2ulxyNi-Rq2OKpTfP0x8Hxo4twzA0w0k9nj9fHXGzhfXQZLkr6hd",
+      "participants": [
+        {
+          "userId": "usr_budi_02",
+          "name": "Pak Budi Santoso",
+          "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZncHLHM4J_XQwfPPfHKchwVEFgHy2TcsXg_KnbnSZqSYrAc7qw7UWn2KTul2ONpxodCfwuYoSN6oR8dVzWEXNs98Y7aQQfs2i9lFqzo6m06HS8Jki21-n2aFW47-bwIVJpeTbeQSUYf-mCQHSnepeRP-lScxmVWS2-JqdJkGnkx2y3NDcHjiNg6WnmFPcXXdfpnHqXQo3GHRFW1gAeLHgTGC2SSSxh74O9G4yAfHuEtXIipcx1CRT",
+          "role": "Team Lead"
+        },
+        {
+          "userId": "usr_sarah_03",
+          "name": "Dr. Sarah Jenkins",
+          "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_JBXekM3H7wnv0VFjwh76I6mOUQiyqEr3ksBlP9wn709Kde3hQ31RE4LDKSU2a_8kupEcLvuHvVKRhR1BVJ6aaKswnnv2zb4lD3d5SFJgH-6Rgb-ryquVZ6RGwIqoWGO6WxboNWb_vIo6enOGcOtO_51I3r39nVr0Bo5FMFBnsngjfZ3H0GDsdzdu_M5t2IOx0q5T-jC25xAQ8jMLqyyfwKDOTaAIEpUV-ZN1ywYcmc6JioDJkvC",
+          "role": "Biologist"
+        },
+        {
+          "userId": "usr_1793191828945_c97e",
+          "name": "Dewi Lestari",
+          "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=dewi%40ocean.org",
+          "role": "Participant"
+        }
+      ]
+    },
+    {
+      "id": "proj_sanur_02",
+      "title": "Sanur Coral Head Line Cutting Sortie",
+      "location": "Sanur Barrier Reef Outer Sector",
+      "date": "Sun, May 25 • 08:30 WITA",
+      "meetingPoint": "Sanur Maritime Center Slipway",
+      "targetTonnage": "280 kg braided cords",
+      "maxParticipants": 10,
+      "description": "Snorkel extrication of monofilament and nylon cord snags caught on massive Porites coral formations. Mesh cutting tools provided.",
+      "urgent": false,
+      "status": "Open for Registration",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBNp_9RHfmSbnCp7s7U6C4Bab1MAa69TS766uCYuN4XJAjdMqJiUW9Q5Jt7377Ak-HzTNzVew9ckO35KSnxLecA8XDH5zYvjQ1UdUNrOeeTs-cwrL1ySoYSL0ragZkD0jKv_kYVopCPzb4WS6AUsinc0UEnLGrsVbNzZzYc3YSBYeczCIRWV06l04OaukNa0qhMwAYmgwJYHM5ug4tqYZAYGbW14lu1_Iw8n61Pw3eUs37D0UIvwL8Q",
+      "participants": [
+        {
+          "userId": "usr_sarah_03",
+          "name": "Dr. Sarah Jenkins",
+          "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_JBXekM3H7wnv0VFjwh76I6mOUQiyqEr3ksBlP9wn709Kde3hQ31RE4LDKSU2a_8kupEcLvuHvVKRhR1BVJ6aaKswnnv2zb4lD3d5SFJgH-6Rgb-ryquVZ6RGwIqoWGO6WxboNWb_vIo6enOGcOtO_51I3r39nVr0Bo5FMFBnsngjfZ3H0GDsdzdu_M5t2IOx0q5T-jC25xAQ8jMLqyyfwKDOTaAIEpUV-ZN1ywYcmc6JioDJkvC",
+          "role": "Diver"
+        }
+      ]
+    },
+    {
+      "id": "proj_banyuwangi_03",
+      "title": "Banyuwangi Strait Net Re-mending Workshop",
+      "location": "Ketapang Port Slipway Pavilion",
+      "date": "Wed, May 28 • 10:00 WIB",
+      "meetingPoint": "Cooperative Workshop Unit 2",
+      "targetTonnage": "600 meters repaired twine",
+      "maxParticipants": 20,
+      "description": "Hands-on net mending clinic for recovered fishing gear with elder artisans. All mended sections redistributed to low-income coastal fishers.",
+      "urgent": false,
+      "status": "Open for Registration",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZdpGybblQEZvDk8DbCoyYQ_fNrHFcQhDZvEoZXCex1Kvo9fO-RrTqJVC4EQYs8kO2icm7Bpq6eT3gAMiw4k0ZQXl3knL1g3uoFPvwyIewHVbtNyyx2RpiJG_ARw6hrjI3UO7Ut845bxGBRKlmPS2zYWulnz4-dYNdDNyun6a4osvPquJM5xfZuSk441KClKfjd9dykPCA22oI2bH7TukngpOY_2K72me30xid3kOy5Q5MJQ_f_lS7",
+      "participants": [
+        {
+          "userId": "usr_budi_02",
+          "name": "Pak Budi Santoso",
+          "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZncHLHM4J_XQwfPPfHKchwVEFgHy2TcsXg_KnbnSZqSYrAc7qw7UWn2KTul2ONpxodCfwuYoSN6oR8dVzWEXNs98Y7aQQfs2i9lFqzo6m06HS8Jki21-n2aFW47-bwIVJpeTbeQSUYf-mCQHSnepeRP-lScxmVWS2-JqdJkGnkx2y3NDcHjiNg6WnmFPcXXdfpnHqXQo3GHRFW1gAeLHgTGC2SSSxh74O9G4yAfHuEtXIipcx1CRT",
+          "role": "Master Rigger"
+        }
+      ]
+    }
+  ],
+  "listings": [
+    {
+      "id": "lst_001",
+      "title": "Recovered Polypropylene Line (22mm)",
+      "category": "Net Mending",
+      "quantity": 120,
+      "unit": "meters",
+      "condition": "Washed & Desalted",
+      "location": "Serangan Repair Hub",
+      "creatorId": "usr_budi_02",
+      "creatorName": "Pak Budi Santoso",
+      "creatorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZncHLHM4J_XQwfPPfHKchwVEFgHy2TcsXg_KnbnSZqSYrAc7qw7UWn2KTul2ONpxodCfwuYoSN6oR8dVzWEXNs98Y7aQQfs2i9lFqzo6m06HS8Jki21-n2aFW47-bwIVJpeTbeQSUYf-mCQHSnepeRP-lScxmVWS2-JqdJkGnkx2y3NDcHjiNg6WnmFPcXXdfpnHqXQo3GHRFW1gAeLHgTGC2SSSxh74O9G4yAfHuEtXIipcx1CRT",
+      "status": "Available",
+      "createdAt": "2025-05-14T09:00:00Z",
+      "description": "Diverted mooring cable, triple-washed and tension-tested. Excellent for agricultural fencing or gear reinforcement."
+    },
+    {
+      "id": "lst_002",
+      "title": "High-Density Polyethylene Net Flakes",
+      "category": "Polymer Pellets",
+      "quantity": 350,
+      "unit": "kg",
+      "condition": "Granulated & Sorted",
+      "location": "Kusamba Coastal Depot",
+      "creatorId": "usr_sarah_03",
+      "creatorName": "Dr. Sarah Jenkins",
+      "creatorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_JBXekM3H7wnv0VFjwh76I6mOUQiyqEr3ksBlP9wn709Kde3hQ31RE4LDKSU2a_8kupEcLvuHvVKRhR1BVJ6aaKswnnv2zb4lD3d5SFJgH-6Rgb-ryquVZ6RGwIqoWGO6WxboNWb_vIo6enOGcOtO_51I3r39nVr0Bo5FMFBnsngjfZ3H0GDsdzdu_M5t2IOx0q5T-jC25xAQ8jMLqyyfwKDOTaAIEpUV-ZN1ywYcmc6JioDJkvC",
+      "status": "Available",
+      "createdAt": "2025-05-13T14:30:00Z",
+      "description": "Certified 100% ocean-recovered gillnet polymer ready for architectural extrusion tile or injection molding."
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "act_001",
+      "userId": "usr_alex_01",
+      "userName": "Alex Stewart",
+      "category": "Net Recovery",
+      "weightKg": 24,
+      "hours": 3.5,
+      "location": "Serangan Harbor Dock #4",
+      "verificationMethod": "Co-op Scale Station #3",
+      "date": "Today, 11:20 WITA",
+      "timestamp": 1793188216865
+    },
+    {
+      "id": "act_002",
+      "userId": "usr_budi_02",
+      "userName": "Pak Budi Santoso",
+      "category": "Net Mending",
+      "weightKg": 50,
+      "hours": 6,
+      "location": "Serangan Net Repair Hub",
+      "verificationMethod": "Co-op Ledger Verified",
+      "date": "Yesterday, 17:00 WITA",
+      "timestamp": 1793105416865
+    }
+  ],
+  "feedPosts": [
+    {
+      "id": "post_001",
+      "authorId": "usr_budi_02",
+      "authorName": "Pak Budi Santoso",
+      "authorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZncHLHM4J_XQwfPPfHKchwVEFgHy2TcsXg_KnbnSZqSYrAc7qw7UWn2KTul2ONpxodCfwuYoSN6oR8dVzWEXNs98Y7aQQfs2i9lFqzo6m06HS8Jki21-n2aFW47-bwIVJpeTbeQSUYf-mCQHSnepeRP-lScxmVWS2-JqdJkGnkx2y3NDcHjiNg6WnmFPcXXdfpnHqXQo3GHRFW1gAeLHgTGC2SSSxh74O9G4yAfHuEtXIipcx1CRT",
+      "authorRole": "Master Net Rigger • Serangan Chapter",
+      "timeAgo": "2 hours ago",
+      "location": "Serangan Net Repair Hub, Bali",
+      "content": "Finished mending 85 meters of snagged nylon gillnet brought in from the Benoa Channel. With new corkline toggles, it is ready to fish cleanly for another two seasons rather than sitting on the seabed.",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBha2vJASaTC3FuAJNoIzPSrOhDZ4aSBBkK5G6T1_gJrCKMpCD5yx80VY_HjFZrJACOEf0glBljiHgZuqvkh9YB3l_G1_Y2yPaaenmypoqm1p7i0-ZnZlL0bPKQn-av5u0dDAg-YiObwrEZ1X18WZockn52t1vVeIK2nXPd5pzjqjeF3ttjDtItp98J_6tvj7QJoso5iZ5vafyMgk-TSN89W1pyupGC0H_ByGkZab7cgqWew03A2PDX",
+      "likesCount": 18,
+      "likedBy": [
+        "usr_alex_01",
+        "usr_sarah_03"
+      ],
+      "comments": [
+        {
+          "id": "c_01",
+          "authorId": "usr_sarah_03",
+          "authorName": "Dr. Sarah Jenkins",
+          "authorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_JBXekM3H7wnv0VFjwh76I6mOUQiyqEr3ksBlP9wn709Kde3hQ31RE4LDKSU2a_8kupEcLvuHvVKRhR1BVJ6aaKswnnv2zb4lD3d5SFJgH-6Rgb-ryquVZ6RGwIqoWGO6WxboNWb_vIo6enOGcOtO_51I3r39nVr0Bo5FMFBnsngjfZ3H0GDsdzdu_M5t2IOx0q5T-jC25xAQ8jMLqyyfwKDOTaAIEpUV-ZN1ywYcmc6JioDJkvC",
+          "text": "Huge thanks Pak Budi! That Benoa mooring was dragging towards the sea grass meadow.",
+          "createdAt": "1 hour ago"
+        }
+      ]
+    },
+    {
+      "id": "post_002",
+      "authorId": "usr_sarah_03",
+      "authorName": "Dr. Sarah Jenkins",
+      "authorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_JBXekM3H7wnv0VFjwh76I6mOUQiyqEr3ksBlP9wn709Kde3hQ31RE4LDKSU2a_8kupEcLvuHvVKRhR1BVJ6aaKswnnv2zb4lD3d5SFJgH-6Rgb-ryquVZ6RGwIqoWGO6WxboNWb_vIo6enOGcOtO_51I3r39nVr0Bo5FMFBnsngjfZ3H0GDsdzdu_M5t2IOx0q5T-jC25xAQ8jMLqyyfwKDOTaAIEpUV-ZN1ywYcmc6JioDJkvC",
+      "authorRole": "Marine Biologist • Sanur Coral Conservation",
+      "timeAgo": "4 hours ago",
+      "location": "Sanur Barrier Reef, Bali",
+      "content": "Coral survey completed after yesterday afternoon recovery. The Porites brain coral has zero tissue abrasion after the weighted synthetic line was gently sliced free. Great teamwork by the volunteer dive squad.",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBNp_9RHfmSbnCp7s7U6C4Bab1MAa69TS766uCYuN4XJAjdMqJiUW9Q5Jt7377Ak-HzTNzVew9ckO35KSnxLecA8XDH5zYvjQ1UdUNrOeeTs-cwrL1ySoYSL0ragZkD0jKv_kYVopCPzb4WS6AUsinc0UEnLGrsVbNzZzYc3YSBYeczCIRWV06l04OaukNa0qhMwAYmgwJYHM5ug4tqYZAYGbW14lu1_Iw8n61Pw3eUs37D0UIvwL8Q",
+      "likesCount": 26,
+      "likedBy": [
+        "usr_alex_01",
+        "usr_budi_02"
+      ],
+      "comments": [
+        {
+          "id": "c_02",
+          "authorId": "usr_alex_01",
+          "authorName": "Alex Stewart",
+          "authorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGBruc0GzJvu5OSIyeTHg_qe5tBpOWGacXbzEsoTIWq0rvSvZ0xGZptOIa5MHGWua9c_bcTq8xNUnxJtpvXwy_laAdy_xnwMFNs2G9SoRtPRTai1aX0S5aW5zikduQ6AyjDe6U-4lmIAmQr3aWWJAv_F4wzdngt_Qr-rZz3lAIYpcQ6FnSk8c581dkADFK_ogc5xL6JUpghT-ak38TFeWH63aLJZPaPFW2Q1EB68B8YsoXARi5a1pR",
+          "text": "The drone flyover confirmed no leftover strands on the north edge either!",
+          "createdAt": "2 hours ago"
+        }
+      ]
+    },
+    {
+      "id": "post_003",
+      "authorId": "usr_alex_01",
+      "authorName": "Alex Stewart",
+      "authorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGBruc0GzJvu5OSIyeTHg_qe5tBpOWGacXbzEsoTIWq0rvSvZ0xGZptOIa5MHGWua9c_bcTq8xNUnxJtpvXwy_laAdy_xnwMFNs2G9SoRtPRTai1aX0S5aW5zikduQ6AyjDe6U-4lmIAmQr3aWWJAv_F4wzdngt_Qr-rZz3lAIYpcQ6FnSk8c581dkADFK_ogc5xL6JUpghT-ak38TFeWH63aLJZPaPFW2Q1EB68B8YsoXARi5a1pR",
+      "authorRole": "Drone Scout • ShoreScan Ops",
+      "timeAgo": "6 hours ago",
+      "location": "Sanur Sector 3 • Rock Jetty",
+      "content": "ShoreScan optical scan completed at low tide. Flagged an intact 40-meter polypropylene net stranded along the rock breakwater. GPS waypoint dispatched to triage dossiers for morning collection.",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYD4lFIXMCvMZVB9y6qiCPwYvE8xV6J4J9FT5BEkIz3tdeu2FKGk53IKfR8Ky9zCi2MX1pIy2-5qTRs2BEzTsvYugCIabu_06mKx7Cmaqn2sNuNexcLmWjQPfnzKwNqeKBpJBvDTjsNwUymdN7lgiRQ4ScmZwQBrzYJRGDWrwK1gl0mRNfUYLcDt59uSlGT6KTFfZ1U1iEFFi0CW5MrxSRdZ2ydqD1KoIlXaD9AHS62o63TVbSJb2k",
+      "likesCount": 15,
+      "likedBy": [
+        "usr_budi_02"
+      ],
+      "comments": []
+    },
+    {
+      "id": "post_004",
+      "authorId": "usr_hawaii_04",
+      "authorName": "Kalea Mahoe",
+      "authorAvatar": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=400&q=80",
+      "authorRole": "Reef Sentinel • Oahu Windward Chapter",
+      "timeAgo": "9 hours ago",
+      "location": "Kaneohe Bay, Oahu, Hawaii",
+      "content": "Aloha stewards! Our weekend community sweep pulled 320 kg of North Pacific Gyre bundle netting from the barrier reef flats. Transferred directly to the Oahu net depot for mechanical shredding and tile extrusion.",
+      "imageUrl": "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80",
+      "likesCount": 31,
+      "likedBy": [
+        "usr_alex_01",
+        "usr_sarah_03",
+        "usr_budi_02"
+      ],
+      "comments": [
+        {
+          "id": "c_03",
+          "authorId": "usr_sarah_03",
+          "authorName": "Dr. Sarah Jenkins",
+          "authorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_JBXekM3H7wnv0VFjwh76I6mOUQiyqEr3ksBlP9wn709Kde3hQ31RE4LDKSU2a_8kupEcLvuHvVKRhR1BVJ6aaKswnnv2zb4lD3d5SFJgH-6Rgb-ryquVZ6RGwIqoWGO6WxboNWb_vIo6enOGcOtO_51I3r39nVr0Bo5FMFBnsngjfZ3H0GDsdzdu_M5t2IOx0q5T-jC25xAQ8jMLqyyfwKDOTaAIEpUV-ZN1ywYcmc6JioDJkvC",
+          "text": "Incredible recovery Kalea! Beautiful work by the Oahu outrigger crew.",
+          "createdAt": "7 hours ago"
+        }
+      ]
+    },
+    {
+      "id": "post_005",
+      "authorId": "usr_cyclades_05",
+      "authorName": "Elena Vassiliou",
+      "authorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+      "authorRole": "Circularity Forge • Cyclades Greece",
+      "timeAgo": "14 hours ago",
+      "location": "Paros Port Slip, Aegean Sea",
+      "content": "First batch of 240 kg recovered Aegean trammel netting successfully washed, separated by polyamide grade, and prepped for yarn spinning! No plastic waste goes to landfill.",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAxuCCaIwzayFjPHA6ZbmB1-f8UaN7dOWMxVQRp9k-TbluDvXQhvLRI141lUXmmgzke06gUr7fVx0b3aOVPzityISNj79-YovUDT2n_BHQn6MdqljZHLGQUCOlhxQzP3-LSn2QOLXvlBmJpGqTfpIhGq6bQBX4TCILIG-TgFg8ey4XQz5Eu08lq2M94Wl8ofbbt7F0Pok1HktHdRLbJLWL43qk7ET92UEVPnBmJUPqI0M6yF6_fuh62",
+      "likesCount": 24,
+      "likedBy": [
+        "usr_budi_02",
+        "usr_sarah_03"
+      ],
+      "comments": []
+    },
+    {
+      "id": "post_006",
+      "authorId": "usr_cozumel_06",
+      "authorName": "Captain Mateo Cruz",
+      "authorAvatar": "https://api.dicebear.com/7.x/bottts/svg?seed=mateo_cruz",
+      "authorRole": "Dive Salvage Lead • Cozumel Mexico",
+      "timeAgo": "1 day ago",
+      "location": "Cozumel International Pier, Quintana Roo",
+      "content": "Extricated 4 derelict wire crab and spiny lobster traps submerged in 14m depth near the south drop-off. Disarmed the cage doors and hoisted them onto our patrol skiff. Reef is clear!",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAd5Kx8lym9GTbQM6w61gM81ktjeG8h-SbXmvtc8Sf_SFCXmb8584NjpOT0iQKhDZrRKPfzXOsQQI8-kBB6thbrJc5qljOUInZJkupHNsPv5orZlJXZJYjBl7Nj64mQ4IoewT67_UFD2_MY_nTLMso1BvrLg_NnXgkBervJFt7585xhRlgQrMig9vcIfoRR8lDU2ulxyNi-Rq2OKpTfP0x8Hxo4twzA0w0k9nj9fHXGzhfXQZLkr6hd",
+      "likesCount": 38,
+      "likedBy": [
+        "usr_alex_01",
+        "usr_budi_02",
+        "usr_sarah_03"
+      ],
+      "comments": [
+        {
+          "id": "c_04",
+          "authorId": "usr_budi_02",
+          "authorName": "Pak Budi Santoso",
+          "authorAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZncHLHM4J_XQwfPPfHKchwVEFgHy2TcsXg_KnbnSZqSYrAc7qw7UWn2KTul2ONpxodCfwuYoSN6oR8dVzWEXNs98Y7aQQfs2i9lFqzo6m06HS8Jki21-n2aFW47-bwIVJpeTbeQSUYf-mCQHSnepeRP-lScxmVWS2-JqdJkGnkx2y3NDcHjiNg6WnmFPcXXdfpnHqXQo3GHRFW1gAeLHgTGC2SSSxh74O9G4yAfHuEtXIipcx1CRT",
+          "text": "Solid technique disarming the traps underwater Mateo. Prevents ongoing ghost fishing completely.",
+          "createdAt": "18 hours ago"
+        }
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1793191829085",
+      "title": "New Hazard Logged",
+      "message": "Submerged Trawl Mesh 40m at Sanur Outer Reef • Coral Zone",
+      "time": "Just now",
+      "icon": "warning",
+      "read": false,
+      "linkScreen": "dossiers"
+    },
+    {
+      "id": "notif_01",
+      "title": "New ShoreScan Hazard Detected",
+      "message": "Sanur Sector 3 reported stranded polypropylene netting under review.",
+      "time": "18 min ago",
+      "icon": "radar",
+      "read": false,
+      "linkScreen": "dossiers"
+    },
+    {
+      "id": "notif_02",
+      "title": "Kuta Shallow Reef Clearance",
+      "message": "Registration is open. Low tide window starts at 07:00 WITA.",
+      "time": "2 hours ago",
+      "icon": "calendar_month",
+      "read": false,
+      "linkScreen": "project-details"
+    }
+  ],
+  "shorescanRuns": []
+}

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-background": "#151c22", "surface-variant": "#dce3eb", "primary-fixed": "#c2e8fb", "inverse-on-surface": "#ebf1fa", "surface-tint": "#3e6373", "surface-dim": "#d4dbe3", "error-container": "#ffdad6", "on-primary-fixed": "#001f29", "on-secondary": "#ffffff", "secondary": "#006a63", "on-secondary-fixed-variant": "#00504a", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#254b5b", "background": "#f6faff", "tertiary-fixed": "#ffdbd1", "on-surface-variant": "#41484b", "on-surface": "#151c22", "tertiary-container": "#64200d", "primary": "#002531", "inverse-surface": "#2a3137", "secondary-fixed": "#90f4e9", "tertiary-fixed-dim": "#ffb5a1", "on-error": "#ffffff", "tertiary": "#460b00", "outline": "#72787c", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#7a2f1b", "surface-container": "#e8eff7", "surface-container-high": "#e2e9f1", "outline-variant": "#c1c7cb", "on-primary": "#ffffff", "on-primary-container": "#7fa5b7", "secondary-fixed-dim": "#73d7cd", "surface-bright": "#f6faff", "on-tertiary-fixed": "#3c0800", "primary-container": "#123b4a", "on-tertiary-container": "#e8856a", "surface-container-low": "#eef4fc", "secondary-container": "#90f4e9", "inverse-primary": "#a6ccdf", "surface": "#f6faff", "primary-fixed-dim": "#a6ccdf", "surface-container-highest": "#dce3eb", "on-secondary-container": "#007169", "on-error-container": "#93000a", "on-secondary-fixed": "#00201d" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "margin-tablet": "2rem", "margin": "3rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg": ["DM Sans"], "label-lg": ["DM Sans"], "headline-sm": ["DM Sans"], "display-hero-mobile": ["DM Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["DM Sans"], "body-sm": ["Inter"], "display-hero": ["DM Sans"], "label-sm": ["DM Sans"], "label-md": ["DM Sans"], "headline-md": ["DM Sans"] }, fontSize: { "headline-lg": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-hero": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;background-color:#f6faff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-primary-container/95 backdrop-blur-xl pt-safe shadow-[0_2px_12px_rgba(18,59,74,0.12)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Go back" class="w-11 h-11 -ml-2 rounded-full flex items-center justify-center text-on-primary/90 hover:text-on-primary transition-colors active:scale-95" onclick="window.history.back()"><span class="material-symbols-outlined text-2xl">arrow_back</span></button><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span> ShoreScan Vision</span><span class="font-headline-sm text-headline-sm text-on-primary truncate">Shorescan Detector</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Camera Info &amp; Help" class="w-10 h-10 rounded-full flex items-center justify-center text-on-primary/80 hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-2xl">help_outline</span></button><a aria-label="Close" class="w-10 h-10 rounded-full flex items-center justify-center text-on-primary/80 hover:text-on-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-2xl">close</span></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-safe">
+<!-- Top Hardware Connectivity Ribbon -->
+<section class="bg-primary-container text-on-primary px-margin-mobile py-space-sm shadow-md">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm shrink-0">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span>Connected (Demo Mode)</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary-fixed-dim truncate hidden xs:inline font-mono">ESP32CAM-v1.4</span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Reset Demo" class="h-8 px-2.5 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-primary-fixed flex items-center gap-1 text-label-sm font-label-sm active:scale-95 transition-all" id="resetDemoBtn">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Reset</span>
+</button>
+<button aria-label="Device Settings" class="w-8 h-8 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-primary-fixed flex items-center justify-center active:scale-95 transition-all" id="deviceSettingsBtn">
+<span class="material-symbols-outlined text-[18px]">settings_input_antenna</span>
+</button>
+</div>
+</div>
+<div class="mt-1 flex items-center justify-between text-label-sm font-label-sm text-primary-fixed-dim/80">
+<span class="truncate">Ref: ShoreScan-v1.4-ESP32CAM • Signal: -48dBm</span>
+<span class="shrink-0 flex items-center gap-1 text-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">battery_horiz_075</span> 84%
+      </span>
+</div>
+</section>
+<!-- Physical-to-Digital Architecture Diagram -->
+<section class="px-margin-mobile pt-space-md pb-space-sm">
+<div class="bg-surface-container-low rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">device_hub</span> Pipeline Flow
+        </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">Edge-to-Action v2</span>
+</div>
+<!-- Pipeline Steps Flow -->
+<div class="overflow-x-auto py-space-xs -mx-space-xs px-space-xs">
+<div class="flex items-center min-w-[340px] justify-between gap-1">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center flex-1">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-semibold mt-1">ShoreScan</span>
+<span class="text-[10px] text-on-surface-variant leading-tight">ESP32 Cam</span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm shrink-0">arrow_forward</span>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center flex-1">
+<div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-semibold mt-1">Edge AI</span>
+<span class="text-[10px] text-on-surface-variant leading-tight">MobileNet-v3</span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm shrink-0">arrow_forward</span>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center flex-1">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-semibold mt-1">TIDEKIND</span>
+<span class="text-[10px] text-on-surface-variant leading-tight">Field Sync</span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm shrink-0">arrow_forward</span>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center flex-1">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-semibold mt-1">Stewards</span>
+<span class="text-[10px] text-on-surface-variant leading-tight">Human Check</span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm shrink-0">arrow_forward</span>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center flex-1">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">waves</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-semibold mt-1">Retrieval</span>
+<span class="text-[10px] text-on-surface-variant leading-tight">Clean Sweep</span>
+</div>
+</div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 pt-2 text-[12px] leading-relaxed">
+        Physical edge computer vision model detects potential ghost gear; verified by community stewards before dispatch.
+      </p>
+</div>
+</section>
+<!-- Live Viewfinder & Sample Selector -->
+<section class="px-margin-mobile pt-space-xs pb-space-sm">
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<h2 class="text-headline-sm font-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">videocam</span> Live Edge Viewfinder
+        </h2>
+<span class="flex items-center gap-1 text-label-sm font-label-sm text-error font-mono">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> REC
+        </span>
+</div>
+<!-- Sample Selector Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-space-xs pt-0.5 no-scrollbar">
+<button class="sample-chip shrink-0 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-secondary text-on-secondary shadow-sm transition-all flex items-center gap-1" data-sample="sanur">
+<span class="material-symbols-outlined text-[14px]">beach_access</span>
+<span>A: Sanur Stranded Gillnet</span>
+</button>
+<button class="sample-chip shrink-0 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-variant transition-all flex items-center gap-1" data-sample="reef">
+<span class="material-symbols-outlined text-[14px]">scuba_diving</span>
+<span>B: Tangled Ropes Reef</span>
+</button>
+<button class="sample-chip shrink-0 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-variant transition-all flex items-center gap-1" data-sample="buoy">
+<span class="material-symbols-outlined text-[14px]">navigation</span>
+<span>C: Drifting Buoy Line</span>
+</button>
+<button class="sample-chip shrink-0 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-variant transition-all flex items-center gap-1" data-sample="clean">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>D: Clean Sandy Shore</span>
+</button>
+</div>
+<!-- Simulated Viewfinder Screen -->
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-primary mt-space-xs shadow-inner">
+<!-- Viewfinder Background Images -->
+<div class="sample-bg-layer absolute inset-0 bg-cover bg-center transition-opacity duration-300" data-alt="High angle shot of a weathered teal and blue nylon fishing gillnet abandoned and half-buried in damp shoreline sand at low tide beside dark volcanic sea rocks in Sanur Bali, outdoor sunny morning lighting, photojournalism documentary style." id="viewfinderImgA" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsnr4E1oJ7r0ckzfDIF8oj81AqwfCIxWNQyglEirhACRkcu4k8krsWAWb4t-wRaT31NG8IKXn1wHldzXbkiAabOEmeg9M-18AYcO_k1D3DhxI_K47IMBRuHzMkU7_zp9IRCR1u7CUR54O4NmN8A6Z7jGXCslhg87xmXwyDPQjKYOiMCfto_7NsmgzA__lLAp_evdINaixxO-Dl_aRNm2ZEQsrfV6cNUyYB6pJBcm28yQ7-7qNB82br')"></div>
+<div class="sample-bg-layer absolute inset-0 bg-cover bg-center transition-opacity duration-300 opacity-0 pointer-events-none" data-alt="Underwater close up of heavy encrusted yellow poly ropes and derelict fishing cords wrapped tightly around a tropical shallow coral reef head with filtered sunbeams through clear turquoise marine water." id="viewfinderImgB" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZ7MbGwuG9fCYqJS9kUYDj_wiuKwIqvazK2msn6Z8PeNj2OPKaMnDC5E-wS59DWpFgRHZP9C3cbF0S2EcG1dZbg1RRxbmO7djVmVRUcFCeTU9QiEbq58KgrUaIMxgDgnhwltueofpve2wvelVyNjUrXypyLgkKcPHcrrT0U7_LsSs_ZNNY4gsn0aknYPHeAQSpsmT4jXxZcclgmVw9FjvBFbozhUM-cMi3en290SxeEOjYEFHoFkn7')"></div>
+<div class="sample-bg-layer absolute inset-0 bg-cover bg-center transition-opacity duration-300 opacity-0 pointer-events-none" data-alt="Ocean surface shot of a weathered orange marine float buoy attached to an uncoiled drifting polypropylene rope bobbing in ocean swell with sun glistening on sea surface." id="viewfinderImgC" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKAgUE_HT3iXP-oZnnASbSCbpSUYJ0yTaI0whzzmcoJ9UcPUHlFmKP8Ed9-H3aPCnHbLyMqm-d25Jdq7ry74BZkYU80XMcZ0vtf7CXBBUlU6YDr9fue1JTyt81105sl8gZ93sjRMBewzXhmIzRgmzBi95qtUBD6zCsptI2dfu9oi3F34owhAEaBWIz4-SCc6HDZt5Ud-VawuMrytzSfRWbLfisx_6TouLaukyqOHcZV-mavajIgSiu')"></div>
+<div class="sample-bg-layer absolute inset-0 bg-cover bg-center transition-opacity duration-300 opacity-0 pointer-events-none" data-alt="Pristine coastal tropical beach with gentle foamy white tide washing over clean untouched golden sand without plastic debris or marine trash, calm morning horizon light." id="viewfinderImgD" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzG3YtdG6F21YqVnKwZW1EI6JAY1jvC16VTYoqPB2BDJSuhtTpgZSBZY2TwWGrVf-_KRzic14uvzt_kNA1ZYKR6w0q4aGc8uf6OJK6GjOHzk3UH8Oey6UzZxMREvaNaTNBS5KsYeRbQCz0oB_RSXp_ztxQ4QffU23_ftgbg56ViWZFRVNM_fH5c0wHTqh-ZtH1hc1FQjSLFH2Fxl4tzg24kRvK8QUhC8gTVWlKCsOnqT-cc6lBB-2Y')"></div>
+<!-- Camera HUD Overlays -->
+<div class="absolute inset-0 p-3 flex flex-col justify-between pointer-events-none">
+<!-- Top HUD -->
+<div class="flex items-center justify-between text-[11px] font-mono text-primary-fixed bg-primary-container/80 backdrop-blur-sm px-2 py-1 rounded">
+<span>FPS: 18.2 | 640x480</span>
+<span id="hudModelText">MobileNet-v3 [INT8]</span>
+<span class="text-secondary-fixed">CAM: ACTIVE</span>
+</div>
+<!-- Bounding Box (Interactive and Target Display) -->
+<div class="relative mx-auto my-auto w-3/4 h-3/5 rounded bg-secondary/10 flex flex-col justify-between p-1.5 transition-all duration-300 shadow-[0_0_0_2px_#168C83]" id="hudBoundingBox">
+<div class="flex items-center justify-between">
+<span class="bg-secondary text-on-secondary text-[10px] font-mono font-bold px-1.5 py-0.5 rounded shadow-sm" id="hudBadgeClass">
+                CLASS 01: Polypropylene Netting [91.4%]
+              </span>
+<span class="text-secondary-fixed-dim text-[10px] font-mono font-bold">ROI #1</span>
+</div>
+<!-- Target Reticle Overlay -->
+<div class="self-center w-6 h-6 flex items-center justify-center opacity-60">
+<span class="material-symbols-outlined text-secondary text-xl">filter_center_focus</span>
+</div>
+<div class="flex items-center justify-between text-[9px] font-mono text-on-primary bg-primary-container/90 px-1.5 py-0.5 rounded">
+<span>X: 142 Y: 89 W: 380 H: 260</span>
+<span class="text-tertiary-fixed font-bold" id="hudRiskStatus">HAZARD: DRAGGING RISK</span>
+</div>
+</div>
+<!-- Negative Test HUD Notice (hidden by default) -->
+<div class="hidden absolute inset-0 m-auto w-4/5 h-20 bg-primary-container/90 backdrop-blur-md rounded-lg flex flex-col items-center justify-center text-center p-2 text-on-primary" id="hudCleanNotice">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl mb-0.5">verified</span>
+<span class="text-label-sm font-label-sm font-bold text-secondary-fixed">No Derelict Gear Detected</span>
+<span class="text-[11px] text-surface-container-high">Confidence: 98.7% Clean Substrate</span>
+</div>
+<!-- Bottom HUD -->
+<div class="flex items-center justify-between text-[10px] font-mono text-on-primary/90 bg-primary-container/70 backdrop-blur-sm px-2 py-1 rounded">
+<span>EXP: 1/420s | ISO 100</span>
+<span>GRID: BALI-SECTOR-03</span>
+<span class="text-secondary-fixed font-semibold">TIDE: LOW (-0.4m)</span>
+</div>
+</div>
+</div>
+<!-- Viewfinder Quick Action Bar -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-sm">
+<button class="h-11 px-space-md rounded-full bg-secondary hover:bg-primary-container text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" id="testDetectionBtn">
+<span class="material-symbols-outlined text-[18px]">center_focus_strong</span>
+<span>Test Detection</span>
+</button>
+<button class="h-11 px-space-md rounded-full bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95 transition-all" id="syncHardwareBtn">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Sync Hardware</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Detection Results & Human Verification Panel -->
+<section class="px-margin-mobile pt-space-xs pb-space-sm">
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between border-b-0 pb-space-xs">
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider font-semibold">ShoreScan AI Inference Result</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Candidate Gear Dossier</h3>
+</div>
+<span class="text-[11px] font-mono px-2 py-1 rounded bg-surface-container text-on-surface-variant shrink-0">Prototype Model</span>
+</div>
+<div class="mt-space-xs p-2.5 rounded bg-surface-container-low text-on-surface text-body-sm font-body-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">auto_graph</span>
+<div>
+<div class="text-label-sm font-label-sm font-bold text-on-surface flex items-center gap-1.5">
+<span id="resultConfidenceText">91.4% Confidence</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container">Edge High</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Edge Model: MobileNet-v3-Marine-0.8 (INT8 quantized)</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="text-label-sm font-label-sm font-mono text-on-surface font-bold">10:14 WITA</span>
+<span class="block text-[10px] text-on-surface-variant">Live Paired</span>
+</div>
+</div>
+<!-- Verification Form -->
+<form class="space-y-space-sm mt-space-sm" onsubmit="event.preventDefault()">
+<!-- Editable Category -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface font-semibold mb-1" for="gearCategory">
+            Predicted Debris Category (Human Overridable)
+          </label>
+<div class="relative">
+<select class="w-full h-12 pl-3 pr-10 rounded bg-surface-container-low text-on-surface text-body-sm font-body-sm appearance-none focus:outline-none focus:bg-surface-container transition-colors" id="gearCategory">
+<option selected="" value="net_hdpe">Fishing Net (High-density Polyethylene / Nylon)</option>
+<option value="rope_reef">Derelict Mooring / Polypropylene Line</option>
+<option value="buoy_rig">Drifting Buoy Line &amp; Trap Rigging</option>
+<option value="crab_pot">Wire Trap / Abandoned Lobster Pot</option>
+<option value="negative">False Positive / Clean Marine Substrate</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Sensor & Environmental Telemetry Grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-0.5">
+<div class="p-2.5 rounded bg-surface-container-low">
+<span class="text-[11px] text-on-surface-variant block font-medium">Hardware Telemetry</span>
+<div class="mt-1 flex items-center gap-1 text-label-sm font-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+<span>ESP32-S3 Lens Clean</span>
+</div>
+<span class="text-[10px] text-on-surface-variant font-mono">Temp: 34°C | RAM: 182KB free</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low">
+<span class="text-[11px] text-on-surface-variant block font-medium">Paired Field GPS</span>
+<div class="mt-1 flex items-center gap-1 text-label-sm font-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">pin_drop</span>
+<span class="truncate">Sanur Beach, Sector 3</span>
+</div>
+<span class="text-[10px] text-on-surface-variant font-mono">8.7052° S, 115.2625° E</span>
+</div>
+</div>
+<!-- Field Steward Observation Notes -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface font-semibold mb-1" for="fieldNotes">
+            Field Steward Ground Notes
+          </label>
+<textarea class="w-full p-3 rounded bg-surface-container-low text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container transition-colors resize-none" id="fieldNotes" rows="3">Heavy braided net half-buried in low tide sand near rock jetty. Appears intact, no active wildlife entangled. Requires 2 people with sand shovel.</textarea>
+</div>
+<!-- Pre-dispatch Safety / Advisory Notice -->
+<div class="p-space-sm rounded bg-error-container text-on-error-container flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">info</span>
+<div class="text-body-sm font-body-sm text-[12px] leading-snug">
+<strong class="font-semibold">Important Safety Protocol:</strong> ShoreScan flags candidate debris. It does <span class="underline">NOT</span> automatically verify ghost gear or authorize unassisted marine salvage. Always adhere to local harbor salvage permits.
+          </div>
+</div>
+<!-- Primary Action Triggers -->
+<div class="pt-space-xs flex flex-col gap-2">
+<button class="w-full h-12 rounded-full bg-secondary hover:bg-primary text-on-secondary text-label-lg font-label-lg flex items-center justify-center gap-2 shadow-md active:scale-98 transition-all" id="sendReportBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+<span>Send to TIDEKIND Community Reports</span>
+</button>
+<button class="w-full h-11 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface text-label-md font-label-md flex items-center justify-center gap-1.5 active:scale-98 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+<span>View Community Reports (14 Active in Sector)</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Recent ShoreScan Sync Queue -->
+<section class="px-margin-mobile pt-space-xs pb-space-lg">
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider font-semibold">Edge History</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Recent ShoreScan Syncs</h3>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">3 Logs</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Item 1: Ready to send -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-2">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm font-label-sm text-on-surface font-bold">#SS-2025-042</span>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-secondary-container text-on-secondary-container">Ready to Send</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface font-semibold truncate mt-0.5">Fishing Net (Gillnet Segment)</p>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5 font-mono">
+<span class="text-secondary font-semibold">91.4% Edge Conf</span>
+<span>•</span>
+<span>Today, 10:14 WITA</span>
+</div>
+</div>
+<button class="shrink-0 h-9 px-3 rounded-full bg-surface-container-highest hover:bg-surface-variant text-on-surface text-label-sm font-label-sm flex items-center gap-1 active:scale-95 transition-all">
+<span>Review</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<!-- Item 2: In Review -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-2">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm font-label-sm text-on-surface font-bold">#SS-2025-041</span>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary-container text-on-primary">In Review</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface font-semibold truncate mt-0.5">Heavy Rope &amp; Mooring Float</p>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5 font-mono">
+<span>88.2% Edge Conf</span>
+<span>•</span>
+<span>Yesterday, 16:40 WITA</span>
+</div>
+</div>
+<button class="shrink-0 h-9 px-3 rounded-full bg-surface-container-highest hover:bg-surface-variant text-on-surface text-label-sm font-label-sm flex items-center gap-1 active:scale-95 transition-all">
+<span>Details</span>
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+</button>
+</div>
+<!-- Item 3: Verified -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-2">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm font-label-sm text-on-surface font-bold">#SS-2025-039</span>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-secondary text-on-secondary">Action Planned</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface font-semibold truncate mt-0.5">Abandoned Wire Crab Trap</p>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5 font-mono">
+<span>76.5% Edge Conf</span>
+<span>•</span>
+<span>2 days ago</span>
+</div>
+</div>
+<button class="shrink-0 h-9 px-3 rounded-full bg-surface-container-highest hover:bg-surface-variant text-on-surface text-label-sm font-label-sm flex items-center gap-1 active:scale-95 transition-all">
+<span>Action Log</span>
+<span class="material-symbols-outlined text-[14px]">checklist</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Notification Toast Modal Triggered on Submit -->
+<div class="fixed bottom-6 left-4 right-4 z-50 transform translate-y-32 transition-transform duration-300 pointer-events-none" id="dispatchToast">
+<div class="bg-primary-container text-on-primary p-space-md rounded-lg shadow-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl">check_circle</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-primary block text-sm">Dispatched to TIDEKIND!</span>
+<span class="text-[12px] text-primary-fixed-dim">Incident #SS-2025-043 logged for Sanur Steward dispatch.</span>
+</div>
+</div>
+<button class="text-on-primary/80 hover:text-on-primary pointer-events-auto p-1" id="closeToast">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Sample definitions
+    const samples = {
+      sanur: {
+        bgId: 'viewfinderImgA',
+        badgeText: 'CLASS 01: Polypropylene Netting [91.4%]',
+        confText: '91.4% Confidence',
+        category: 'net_hdpe',
+        risk: 'HAZARD: DRAGGING RISK',
+        notes: 'Heavy braided net half-buried in low tide sand near rock jetty. Appears intact, no active wildlife entangled. Requires 2 people with sand shovel.',
+        hasBox: true
+      },
+      reef: {
+        bgId: 'viewfinderImgB',
+        badgeText: 'CLASS 04: Tangled Synthetic Rope [88.2%]',
+        confText: '88.2% Confidence',
+        category: 'rope_reef',
+        risk: 'HAZARD: CORAL SMOTHERING',
+        notes: 'Submerged poly cord snagged around Porites coral head in 1.5m shallow depth. Mask & snorkel retrieval recommended with line cutters.',
+        hasBox: true
+      },
+      buoy: {
+        bgId: 'viewfinderImgC',
+        badgeText: 'CLASS 02: Drifting Buoy & Line [84.7%]',
+        confText: '84.7% Confidence',
+        category: 'buoy_rig',
+        risk: 'HAZARD: BOAT FOULING RISK',
+        notes: 'Unmarked orange high-flotation buoy bobbing ~30m off the harbor channel. Long tail trailing behind, navigation obstacle.',
+        hasBox: true
+      },
+      clean: {
+        bgId: 'viewfinderImgD',
+        badgeText: 'NO TARGET',
+        confText: '2.1% Gear Probability',
+        category: 'negative',
+        risk: 'CLEAN SECTOR',
+        notes: 'Negative baseline run. Pristine sandy shore with normal shell debris and sea wrack. No derelict gear detected.',
+        hasBox: false
+      }
+    };
+
+    const chips = document.querySelectorAll('.sample-chip');
+    const bgLayers = document.querySelectorAll('.sample-bg-layer');
+    const hudBox = document.getElementById('hudBoundingBox');
+    const hudBadge = document.getElementById('hudBadgeClass');
+    const hudRisk = document.getElementById('hudRiskStatus');
+    const hudCleanNotice = document.getElementById('hudCleanNotice');
+    const confDisplay = document.getElementById('resultConfidenceText');
+    const catSelect = document.getElementById('gearCategory');
+    const notesArea = document.getElementById('fieldNotes');
+    const dispatchToast = document.getElementById('dispatchToast');
+    const sendBtn = document.getElementById('sendReportBtn');
+    const closeToast = document.getElementById('closeToast');
+    const resetBtn = document.getElementById('resetDemoBtn');
+    const testDetectionBtn = document.getElementById('testDetectionBtn');
+
+    function selectSample(key) {
+      const data = samples[key];
+      if (!data) return;
+
+      // Update chip styling
+      chips.forEach(c => {
+        if (c.dataset.sample === key) {
+          c.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          c.classList.add('bg-secondary', 'text-on-secondary');
+        } else {
+          c.classList.remove('bg-secondary', 'text-on-secondary');
+          c.classList.add('bg-surface-container', 'text-on-surface-variant');
+        }
+      });
+
+      // Switch background
+      bgLayers.forEach(layer => {
+        if (layer.id === data.bgId) {
+          layer.classList.remove('opacity-0', 'pointer-events-none');
+          layer.classList.add('opacity-100');
+        } else {
+          layer.classList.add('opacity-0', 'pointer-events-none');
+          layer.classList.remove('opacity-100');
+        }
+      });
+
+      // Update HUD Bounding Box
+      if (data.hasBox) {
+        hudBox.classList.remove('hidden');
+        hudCleanNotice.classList.add('hidden');
+        hudBadge.textContent = data.badgeText;
+        hudRisk.textContent = data.risk;
+      } else {
+        hudBox.classList.add('hidden');
+        hudCleanNotice.classList.remove('hidden');
+      }
+
+      // Update Form fields
+      confDisplay.textContent = data.confText;
+      catSelect.value = data.category;
+      notesArea.value = data.notes;
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        selectSample(chip.dataset.sample);
+      });
+    });
+
+    // Test Detection Animation Effect
+    if (testDetectionBtn) {
+      testDetectionBtn.addEventListener('click', () => {
+        testDetectionBtn.disabled = true;
+        testDetectionBtn.classList.add('opacity-70');
+        hudBox.classList.add('scale-105');
+        setTimeout(() => {
+          hudBox.classList.remove('scale-105');
+          testDetectionBtn.disabled = false;
+          testDetectionBtn.classList.remove('opacity-70');
+        }, 300);
+      });
+    }
+
+    // Reset Demo Action
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        selectSample('sanur');
+      });
+    }
+
+    // Submit Dispatch action
+    if (sendBtn && dispatchToast) {
+      sendBtn.addEventListener('click', () => {
+        dispatchToast.classList.remove('translate-y-32');
+        dispatchToast.classList.add('translate-y-0');
+        setTimeout(() => {
+          dispatchToast.classList.add('translate-y-32');
+          dispatchToast.classList.remove('translate-y-0');
+        }, 4000);
+      });
+    }
+
+    if (closeToast && dispatchToast) {
+      closeToast.addEventListener('click', () => {
+        dispatchToast.classList.add('translate-y-32');
+        dispatchToast.classList.remove('translate-y-0');
+      });
+    }
+  })();
+</script></main></body></html>
