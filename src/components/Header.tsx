@@ -99,7 +99,7 @@ export const Header: React.FC<HeaderProps> = ({
                   </span>
                 </div>
                 <span className="text-sm font-bold tracking-tight text-white truncate font-['DM_Sans']">
-                  {getScreenTitle(currentScreen)}
+                  TIDEKIND
                 </span>
               </div>
             </button>
@@ -116,17 +116,6 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <span className="material-symbols-outlined text-[15px]">map</span>
               <span className="text-[11px] hidden sm:inline">Map</span>
-            </button>
-
-            {/* Quick Screens Button */}
-            <button
-              type="button"
-              onClick={onOpenNavigator ? onOpenNavigator : () => onNavigate('navigator')}
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-white/10 hover:bg-white/20 text-[#90f4e9] transition-all active:scale-95"
-              title="Open Prototype Navigator"
-            >
-              <span className="material-symbols-outlined text-[15px]">apps</span>
-              <span className="text-[11px]">Screens</span>
             </button>
 
             {/* Notifications Button */}

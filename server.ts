@@ -877,6 +877,7 @@ app.get('/api/data', (_req: Request, res: Response) => {
     listings: db.listings,
     activityLogs: db.activityLogs,
     feedPosts: db.feedPosts,
+    testimonials: db.testimonials || [],
     notifications: db.notifications,
     shorescanRuns: db.shorescanRuns,
   });
@@ -1064,12 +1065,12 @@ app.post('/api/activity-logs', (req: Request, res: Response) => {
   res.status(201).json({ log: newLog, user: sanitizeUser(user) });
 });
 
-// Community Feed (Posts, Likes, Comments)
+// Community Feed (Posts, Likes, Comments, Edit, Delete)
 app.post('/api/feed', (req: Request, res: Response) => {
   const user = getAuthUser(req);
   if (!user) return res.status(401).json({ error: 'Authentication required to post.' });
 
-  const { content, imageUrl, location } = req.body;
+  const { content, imageUrl, location, category, linkedProjectId, linkedProjectTitle, linkedReportId, linkedReportTitle } = req.body;
   if (!content || !content.trim()) return res.status(400).json({ error: 'Post content cannot be empty.' });
 
   const newPost = {
@@ -1078,13 +1079,19 @@ app.post('/api/feed', (req: Request, res: Response) => {
     authorName: user.name,
     authorAvatar: user.avatar,
     authorRole: `${user.badge} • ${user.chapter}`,
+    category: category || 'Community Projects',
     timeAgo: 'Just now',
     location: location || user.location,
     content: content.trim(),
     imageUrl: imageUrl || null,
+    linkedProjectId: linkedProjectId || undefined,
+    linkedProjectTitle: linkedProjectTitle || undefined,
+    linkedReportId: linkedReportId || undefined,
+    linkedReportTitle: linkedReportTitle || undefined,
     likesCount: 0,
     likedBy: [],
     comments: [],
+    createdAt: new Date().toISOString(),
   };
 
   db.feedPosts.unshift(newPost);
@@ -1092,6 +1099,51 @@ app.post('/api/feed', (req: Request, res: Response) => {
   broadcast('feed_updated', { post: newPost });
 
   res.status(201).json({ post: newPost });
+});
+
+app.put('/api/feed/:id', (req: Request, res: Response) => {
+  const user = getAuthUser(req);
+  if (!user) return res.status(401).json({ error: 'Authentication required to edit.' });
+
+  const { id } = req.params;
+  const post = db.feedPosts.find((p) => p.id === id);
+  if (!post) return res.status(404).json({ error: 'Post not found.' });
+
+  if (post.authorId !== user.id && user.role !== 'Admin') {
+    return res.status(403).json({ error: 'You can only edit your own posts.' });
+  }
+
+  const { content, category, imageUrl, linkedProjectId, linkedProjectTitle, linkedReportId, linkedReportTitle } = req.body;
+  if (content !== undefined) post.content = content.trim();
+  if (category !== undefined) post.category = category;
+  if (imageUrl !== undefined) post.imageUrl = imageUrl;
+  if (linkedProjectId !== undefined) post.linkedProjectId = linkedProjectId;
+  if (linkedProjectTitle !== undefined) post.linkedProjectTitle = linkedProjectTitle;
+  if (linkedReportId !== undefined) post.linkedReportId = linkedReportId;
+  if (linkedReportTitle !== undefined) post.linkedReportTitle = linkedReportTitle;
+
+  saveDb(db);
+  broadcast('feed_updated', { post });
+  res.json({ post });
+});
+
+app.delete('/api/feed/:id', (req: Request, res: Response) => {
+  const user = getAuthUser(req);
+  if (!user) return res.status(401).json({ error: 'Authentication required.' });
+
+  const { id } = req.params;
+  const index = db.feedPosts.findIndex((p) => p.id === id);
+  if (index === -1) return res.status(404).json({ error: 'Post not found.' });
+
+  const post = db.feedPosts[index];
+  if (post.authorId !== user.id && user.role !== 'Admin') {
+    return res.status(403).json({ error: 'You can only delete your own posts.' });
+  }
+
+  db.feedPosts.splice(index, 1);
+  saveDb(db);
+  broadcast('feed_post_deleted', { postId: id });
+  res.json({ success: true, postId: id });
 });
 
 app.post('/api/feed/:id/like', (req: Request, res: Response) => {
@@ -1141,6 +1193,142 @@ app.post('/api/feed/:id/comment', (req: Request, res: Response) => {
   broadcast('feed_updated', { post });
 
   res.status(201).json({ comment, post });
+});
+
+app.delete('/api/feed/:postId/comments/:commentId', (req: Request, res: Response) => {
+  const user = getAuthUser(req);
+  if (!user) return res.status(401).json({ error: 'Authentication required.' });
+
+  const { postId, commentId } = req.params;
+  const post = db.feedPosts.find((p) => p.id === postId);
+  if (!post) return res.status(404).json({ error: 'Post not found.' });
+
+  const commentIndex = post.comments.findIndex((c) => c.id === commentId);
+  if (commentIndex === -1) return res.status(404).json({ error: 'Comment not found.' });
+
+  const comment = post.comments[commentIndex];
+  if (comment.authorId !== user.id && user.role !== 'Admin') {
+    return res.status(403).json({ error: 'You can only delete your own comments.' });
+  }
+
+  post.comments.splice(commentIndex, 1);
+  saveDb(db);
+  broadcast('feed_updated', { post });
+  res.json({ success: true, post });
+});
+
+// Community Stories & Testimonials Endpoints
+app.get('/api/testimonials', (_req: Request, res: Response) => {
+  res.json({ testimonials: db.testimonials || [] });
+});
+
+app.post('/api/testimonials', (req: Request, res: Response) => {
+  const user = getAuthUser(req);
+  if (!user) return res.status(401).json({ error: 'Authentication required to submit stories.' });
+
+  const { authorName, authorRole, affiliation, story, authorAvatar, consentGiven } = req.body;
+  if (!story || !story.trim()) {
+    return res.status(400).json({ error: 'Story content cannot be empty.' });
+  }
+  if (!consentGiven) {
+    return res.status(400).json({ error: 'Consent to display story publicly is required.' });
+  }
+
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+  const newTestimonial = {
+    id: `test_${Date.now()}`,
+    authorId: user.id,
+    authorName: (authorName && authorName.trim()) || user.name,
+    authorAvatar: authorAvatar || user.avatar,
+    authorRole: authorRole || 'Volunteer',
+    affiliation: affiliation || user.chapter || user.location,
+    story: story.trim(),
+    date: dateStr,
+    createdAt: now.toISOString(),
+    consentGiven: true,
+    status: user.role === 'Admin' || user.role === 'Coordinator' ? 'approved' : 'pending_review',
+    isSample: false,
+  };
+
+  if (!db.testimonials) db.testimonials = [];
+  db.testimonials.unshift(newTestimonial);
+  saveDb(db);
+  broadcast('testimonials_updated', { testimonial: newTestimonial });
+
+  res.status(201).json({ testimonial: newTestimonial });
+});
+
+app.put('/api/testimonials/:id', (req: Request, res: Response) => {
+  const user = getAuthUser(req);
+  if (!user) return res.status(401).json({ error: 'Authentication required.' });
+
+  const { id } = req.params;
+  const testimonial = db.testimonials?.find((t) => t.id === id);
+  if (!testimonial) return res.status(404).json({ error: 'Testimonial not found.' });
+
+  if (testimonial.authorId !== user.id && user.role !== 'Admin') {
+    return res.status(403).json({ error: 'You can only edit your own story.' });
+  }
+
+  const { story, authorRole, affiliation, authorAvatar } = req.body;
+  if (story !== undefined) testimonial.story = story.trim();
+  if (authorRole !== undefined) testimonial.authorRole = authorRole;
+  if (affiliation !== undefined) testimonial.affiliation = affiliation;
+  if (authorAvatar !== undefined) testimonial.authorAvatar = authorAvatar;
+
+  saveDb(db);
+  broadcast('testimonials_updated', { testimonial });
+  res.json({ testimonial });
+});
+
+app.delete('/api/testimonials/:id', (req: Request, res: Response) => {
+  const user = getAuthUser(req);
+  if (!user) return res.status(401).json({ error: 'Authentication required.' });
+
+  const { id } = req.params;
+  const index = db.testimonials?.findIndex((t) => t.id === id) ?? -1;
+  if (index === -1) return res.status(404).json({ error: 'Testimonial not found.' });
+
+  const testimonial = db.testimonials[index];
+  if (testimonial.authorId !== user.id && user.role !== 'Admin') {
+    return res.status(403).json({ error: 'You can only delete your own story.' });
+  }
+
+  db.testimonials.splice(index, 1);
+  saveDb(db);
+  broadcast('testimonials_updated', { deletedId: id });
+  res.json({ success: true, deletedId: id });
+});
+
+app.patch('/api/testimonials/:id/status', (req: Request, res: Response) => {
+  const user = getAuthUser(req);
+  if (!user) return res.status(401).json({ error: 'Authentication required.' });
+
+  const { id } = req.params;
+  const { status } = req.body;
+  const testimonial = db.testimonials?.find((t) => t.id === id);
+  if (!testimonial) return res.status(404).json({ error: 'Testimonial not found.' });
+
+  testimonial.status = status === 'approved' ? 'approved' : 'pending_review';
+  saveDb(db);
+  broadcast('testimonials_updated', { testimonial });
+  res.json({ testimonial });
+});
+
+// Image Upload Endpoint (stores base64 or returns processed URL)
+app.post('/api/upload', (req: Request, res: Response) => {
+  const user = getAuthUser(req);
+  if (!user) return res.status(401).json({ error: 'Authentication required to upload.' });
+
+  const { dataUrl } = req.body;
+  if (!dataUrl || !dataUrl.startsWith('data:image/')) {
+    return res.status(400).json({ error: 'Valid image data URL required.' });
+  }
+
+  // The base64 Data URL is completely self-contained and persistently stored in the DB
+  res.json({ url: dataUrl });
 });
 
 // ShoreScan Storage

@@ -60,6 +60,7 @@ export interface SharedDataPayload {
   listings: ResourceListing[];
   activityLogs: ActivityLog[];
   feedPosts: FeedPost[];
+  testimonials: any[];
   notifications: AppNotification[];
   shorescanRuns: any[];
 }
@@ -253,10 +254,43 @@ export const api = {
     });
   },
 
-  async createFeedPost(data: { content: string; imageUrl?: string; location?: string }): Promise<{ post: FeedPost }> {
+  async createFeedPost(data: {
+    content: string;
+    imageUrl?: string | null;
+    location?: string;
+    category?: string;
+    linkedProjectId?: string;
+    linkedProjectTitle?: string;
+    linkedReportId?: string;
+    linkedReportTitle?: string;
+  }): Promise<{ post: FeedPost }> {
     return request<{ post: FeedPost }>('/api/feed', {
       method: 'POST',
       body: JSON.stringify(data),
+    });
+  },
+
+  async editFeedPost(
+    postId: string,
+    data: {
+      content?: string;
+      category?: string;
+      imageUrl?: string | null;
+      linkedProjectId?: string;
+      linkedProjectTitle?: string;
+      linkedReportId?: string;
+      linkedReportTitle?: string;
+    }
+  ): Promise<{ post: FeedPost }> {
+    return request<{ post: FeedPost }>(`/api/feed/${postId}`, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+    });
+  },
+
+  async deleteFeedPost(postId: string): Promise<{ success: boolean; postId: string }> {
+    return request<{ success: boolean; postId: string }>(`/api/feed/${postId}`, {
+      method: 'DELETE',
     });
   },
 
@@ -270,6 +304,66 @@ export const api = {
     return request<{ comment: any; post: FeedPost }>(`/api/feed/${postId}/comment`, {
       method: 'POST',
       body: JSON.stringify({ text }),
+    });
+  },
+
+  async deleteFeedComment(postId: string, commentId: string): Promise<{ success: boolean; post: FeedPost }> {
+    return request<{ success: boolean; post: FeedPost }>(`/api/feed/${postId}/comments/${commentId}`, {
+      method: 'DELETE',
+    });
+  },
+
+  // Testimonials
+  async getTestimonials(): Promise<{ testimonials: any[] }> {
+    return request<{ testimonials: any[] }>('/api/testimonials');
+  },
+
+  async createTestimonial(data: {
+    authorName?: string;
+    authorRole: string;
+    affiliation?: string;
+    story: string;
+    authorAvatar?: string;
+    consentGiven: boolean;
+  }): Promise<{ testimonial: any }> {
+    return request<{ testimonial: any }>('/api/testimonials', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  },
+
+  async editTestimonial(
+    id: string,
+    data: {
+      story?: string;
+      authorRole?: string;
+      affiliation?: string;
+      authorAvatar?: string;
+    }
+  ): Promise<{ testimonial: any }> {
+    return request<{ testimonial: any }>(`/api/testimonials/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+    });
+  },
+
+  async deleteTestimonial(id: string): Promise<{ success: boolean; deletedId: string }> {
+    return request<{ success: boolean; deletedId: string }>(`/api/testimonials/${id}`, {
+      method: 'DELETE',
+    });
+  },
+
+  async moderateTestimonial(id: string, status: 'approved' | 'pending_review'): Promise<{ testimonial: any }> {
+    return request<{ testimonial: any }>(`/api/testimonials/${id}/status`, {
+      method: 'PATCH',
+      body: JSON.stringify({ status }),
+    });
+  },
+
+  async uploadImage(dataUrl: string): Promise<{ url: string }> {
+    return request<{ url: string }>('/api/upload', {
+      method: 'POST',
+      body: JSON.stringify({ dataUrl }),
     });
   },
 

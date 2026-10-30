@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ASSETS } from '../data/assets';
 import { ScreenId } from '../types';
 import { useAuth } from '../context/AuthContext';
@@ -24,6 +24,81 @@ export const ReportGearScreen: React.FC<ReportGearScreenProps> = ({
   const [observerName, setObserverName] = useState(user?.name || 'Alex Steward');
   const [observerEmail, setObserverEmail] = useState(user?.email || 'alex@tidekind.org');
 
+  const [attachedPhotoUrl, setAttachedPhotoUrl] = useState<string | null>(ASSETS.netSnagSample);
+  const [photoSourceLabel, setPhotoSourceLabel] = useState<string>('net_snag_sample.jpg');
+  const [isCameraActive, setIsCameraActive] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const streamRef = useRef<MediaStream | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach((track) => track.stop());
+      }
+    };
+  }, []);
+
+  const startCamera = async () => {
+    try {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        showToast('Camera not supported on this browser', 'error');
+        return;
+      }
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: 'environment', width: { ideal: 1280 } },
+      });
+      streamRef.current = stream;
+      setIsCameraActive(true);
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
+          videoRef.current.play().catch(console.error);
+        }
+      }, 100);
+    } catch (err: any) {
+      console.error(err);
+      showToast('Camera permission denied or camera unavailable', 'error');
+    }
+  };
+
+  const stopCamera = () => {
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach((track) => track.stop());
+      streamRef.current = null;
+    }
+    setIsCameraActive(false);
+  };
+
+  const capturePhoto = () => {
+    if (!videoRef.current) return;
+    const canvas = document.createElement('canvas');
+    canvas.width = videoRef.current.videoWidth || 640;
+    canvas.height = videoRef.current.videoHeight || 480;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
+      const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+      setAttachedPhotoUrl(dataUrl);
+      setPhotoSourceLabel(`camera_capture_${Date.now()}.jpg`);
+      stopCamera();
+      showToast('Photo captured from camera!', 'photo_camera');
+    }
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setAttachedPhotoUrl(reader.result as string);
+        setPhotoSourceLabel(file.name);
+        showToast(`Uploaded ${file.name}`, 'add_photo_alternate');
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   useEffect(() => {
     if (user) {
       setObserverName(user.name);
@@ -34,7 +109,6 @@ export const ReportGearScreen: React.FC<ReportGearScreenProps> = ({
   const [notes, setNotes] = useState(
     'Dense mesh net wrapping approximately 6 meters across an active hard coral head. Moderate tidal surge present. Several small reef fish trapped, juvenile green sea turtle sighted feeding within 15 meters.'
   );
-  const [isPhotoAttached, setIsPhotoAttached] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isSubmittedModalOpen, setIsSubmittedModalOpen] = useState(false);
 
@@ -83,7 +157,7 @@ export const ReportGearScreen: React.FC<ReportGearScreenProps> = ({
       threatLevel: isUrgentThreat ? 'High Entanglement Hazard' : 'Moderate Hazard',
       hasWildlifeEntanglement: isUrgentThreat,
       status: 'Under Review',
-      imageUrl: ASSETS.netSnagSample,
+      imageUrl: attachedPhotoUrl || ASSETS.netSnagSample,
       submittedAt: 'Just now',
       confidence: 'Field Steward Report',
       assignedTeam: 'Sanur Marine Patrol',
@@ -383,30 +457,70 @@ export const ReportGearScreen: React.FC<ReportGearScreenProps> = ({
               <h2 className="text-sm font-bold text-[#151c22]">Photo & Evidence Log</h2>
             </div>
             <span className="text-xs font-bold text-[#006a63]">
-              {isPhotoAttached ? '1 File Attached' : 'No Files'}
+              {attachedPhotoUrl ? '1 Photo Attached' : 'No Photo'}
             </span>
           </div>
           <p className="text-xs text-[#41484b]">
             Clear field imagery aids rapid dive team staging and line-cutter selection.
           </p>
 
-          {isPhotoAttached && (
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            className="hidden"
+            onChange={handleFileUpload}
+          />
+
+          {/* Camera Viewfinder */}
+          {isCameraActive && (
+            <div className="relative rounded-2xl overflow-hidden bg-black aspect-video flex flex-col items-center justify-center border border-[#90f4e9]">
+              <video
+                ref={videoRef}
+                autoPlay
+                playsInline
+                muted
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 pointer-events-none border-2 border-dashed border-[#90f4e9]/60 m-4 rounded-xl"></div>
+              <div className="absolute bottom-3 inset-x-3 flex items-center justify-between z-10">
+                <button
+                  type="button"
+                  onClick={stopCamera}
+                  className="px-3 py-1.5 rounded-full bg-black/60 text-white text-xs font-semibold backdrop-blur-xs"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  onClick={capturePhoto}
+                  className="w-12 h-12 rounded-full bg-white text-[#002531] flex items-center justify-center shadow-lg active:scale-95"
+                  title="Capture Frame"
+                >
+                  <span className="material-symbols-outlined text-2xl">photo_camera</span>
+                </button>
+                <div className="w-16"></div>
+              </div>
+            </div>
+          )}
+
+          {attachedPhotoUrl && !isCameraActive && (
             <div className="flex items-center gap-3 p-2.5 bg-[#f6faff] rounded-2xl border border-[#dce3eb]">
               <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 relative bg-[#002531]">
                 <img
-                  src={ASSETS.netSnagSample}
+                  src={attachedPhotoUrl}
                   alt="Net Snag"
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute bottom-0.5 left-0.5 bg-black/80 px-1 rounded text-[8px] text-white font-mono">
-                  JPG
+                  IMG
                 </span>
               </div>
               <div className="flex flex-col flex-1 min-w-0">
                 <span className="text-xs font-bold text-[#151c22] truncate">
-                  net_snag_sample.jpg
+                  {photoSourceLabel}
                 </span>
-                <span className="text-[10px] text-[#72787c]">3.4 MB • High Definition GPS Exif</span>
+                <span className="text-[10px] text-[#72787c]">Live Evidence Capture</span>
                 <span className="text-[10px] text-[#006a63] font-semibold">
                   Verified by Device Sensors
                 </span>
@@ -414,30 +528,41 @@ export const ReportGearScreen: React.FC<ReportGearScreenProps> = ({
               <button
                 type="button"
                 onClick={() => {
-                  setIsPhotoAttached(false);
+                  setAttachedPhotoUrl(null);
                   showToast('Photo removed', 'close');
                 }}
                 className="w-8 h-8 rounded-full bg-[#e8eff7] hover:bg-[#ffdad6] text-[#41484b] hover:text-[#ba1a1a] flex items-center justify-center transition-colors"
+                title="Remove photo"
               >
                 <span className="material-symbols-outlined text-base">close</span>
               </button>
             </div>
           )}
 
-          <div
-            onClick={() => {
-              setIsPhotoAttached(true);
-              showToast('Camera snapshot uploaded with GPS EXIF metadata', 'add_a_photo');
-            }}
-            className="border-dashed border-2 border-[#c1c7cb] rounded-2xl p-4 flex flex-col items-center justify-center text-center bg-[#f6faff]/50 hover:bg-[#eef4fc] transition-colors cursor-pointer"
-          >
-            <div className="w-9 h-9 rounded-full bg-[#90f4e9]/40 text-[#006a63] flex items-center justify-center mb-1">
-              <span className="material-symbols-outlined text-xl">add_photo_alternate</span>
-            </div>
-            <span className="text-xs font-bold text-[#151c22]">
-              Add more images or video snippet
-            </span>
-            <span className="text-[10px] text-[#72787c]">Drag file or tap to snap from camera</span>
+          <div className="grid grid-cols-2 gap-2 pt-1">
+            <button
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              className="p-3 rounded-2xl bg-[#f6faff] border border-dashed border-[#c1c7cb] hover:bg-[#eef4fc] transition-colors flex flex-col items-center justify-center text-center gap-1 active:scale-95"
+            >
+              <div className="w-8 h-8 rounded-full bg-[#90f4e9]/40 text-[#006a63] flex items-center justify-center">
+                <span className="material-symbols-outlined text-lg">upload_file</span>
+              </div>
+              <span className="text-xs font-bold text-[#151c22]">Choose File</span>
+              <span className="text-[10px] text-[#72787c]">JPG, PNG, WEBP</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={startCamera}
+              className="p-3 rounded-2xl bg-[#f6faff] border border-dashed border-[#c1c7cb] hover:bg-[#eef4fc] transition-colors flex flex-col items-center justify-center text-center gap-1 active:scale-95"
+            >
+              <div className="w-8 h-8 rounded-full bg-[#90f4e9]/40 text-[#006a63] flex items-center justify-center">
+                <span className="material-symbols-outlined text-lg">photo_camera</span>
+              </div>
+              <span className="text-xs font-bold text-[#151c22]">Take Photo</span>
+              <span className="text-[10px] text-[#72787c]">Device Camera</span>
+            </button>
           </div>
         </div>
 

@@ -29,6 +29,7 @@ interface AuthContextType {
   listings: ResourceListing[];
   activityLogs: ActivityLog[];
   feedPosts: FeedPost[];
+  testimonials: any[];
   notifications: AppNotification[];
 
   addReport: (data: Partial<GearReport>) => Promise<GearReport>;
@@ -37,9 +38,54 @@ interface AuthContextType {
   leaveProject: (projectId: string) => Promise<void>;
   addListing: (listing: Partial<ResourceListing>) => Promise<ResourceListing>;
   logActivity: (data: { category: string; weightKg: number; hours: number; location: string; verificationMethod?: string }) => Promise<void>;
-  createPost: (content: string, imageUrl?: string, location?: string) => Promise<void>;
+  createPost: (params: {
+    content: string;
+    imageUrl?: string | null;
+    location?: string;
+    category?: string;
+    linkedProjectId?: string;
+    linkedProjectTitle?: string;
+    linkedReportId?: string;
+    linkedReportTitle?: string;
+  }) => Promise<void>;
+  editPost: (
+    postId: string,
+    params: {
+      content?: string;
+      category?: string;
+      imageUrl?: string | null;
+      linkedProjectId?: string;
+      linkedProjectTitle?: string;
+      linkedReportId?: string;
+      linkedReportTitle?: string;
+    }
+  ) => Promise<void>;
+  deletePost: (postId: string) => Promise<void>;
   likePost: (postId: string) => Promise<void>;
   commentPost: (postId: string, text: string) => Promise<void>;
+  deleteComment: (postId: string, commentId: string) => Promise<void>;
+
+  // Testimonials
+  createTestimonial: (data: {
+    authorName?: string;
+    authorRole: string;
+    affiliation?: string;
+    story: string;
+    authorAvatar?: string;
+    consentGiven: boolean;
+  }) => Promise<void>;
+  editTestimonial: (
+    id: string,
+    data: {
+      story?: string;
+      authorRole?: string;
+      affiliation?: string;
+      authorAvatar?: string;
+    }
+  ) => Promise<void>;
+  deleteTestimonial: (id: string) => Promise<void>;
+  moderateTestimonial: (id: string, status: 'approved' | 'pending_review') => Promise<void>;
+  uploadImage: (dataUrl: string) => Promise<string>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -119,6 +165,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         eventSource.addEventListener('listing_created', handleUpdate);
         eventSource.addEventListener('activity_logged', handleUpdate);
         eventSource.addEventListener('feed_updated', handleUpdate);
+        eventSource.addEventListener('feed_post_deleted', handleUpdate);
+        eventSource.addEventListener('testimonials_updated', handleUpdate);
         eventSource.addEventListener('profile_updated', (e: MessageEvent) => {
           try {
             const parsed = JSON.parse(e.data);
@@ -249,8 +297,38 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     await refreshData();
   };
 
-  const createPost = async (content: string, imageUrl?: string, location?: string) => {
-    await api.createFeedPost({ content, imageUrl, location });
+  const createPost = async (params: {
+    content: string;
+    imageUrl?: string | null;
+    location?: string;
+    category?: string;
+    linkedProjectId?: string;
+    linkedProjectTitle?: string;
+    linkedReportId?: string;
+    linkedReportTitle?: string;
+  }) => {
+    await api.createFeedPost(params);
+    await refreshData();
+  };
+
+  const editPost = async (
+    postId: string,
+    params: {
+      content?: string;
+      category?: string;
+      imageUrl?: string | null;
+      linkedProjectId?: string;
+      linkedProjectTitle?: string;
+      linkedReportId?: string;
+      linkedReportTitle?: string;
+    }
+  ) => {
+    await api.editFeedPost(postId, params);
+    await refreshData();
+  };
+
+  const deletePost = async (postId: string) => {
+    await api.deleteFeedPost(postId);
     await refreshData();
   };
 
@@ -262,6 +340,51 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const commentPost = async (postId: string, text: string) => {
     await api.commentPost(postId, text);
     await refreshData();
+  };
+
+  const deleteComment = async (postId: string, commentId: string) => {
+    await api.deleteFeedComment(postId, commentId);
+    await refreshData();
+  };
+
+  const createTestimonial = async (data: {
+    authorName?: string;
+    authorRole: string;
+    affiliation?: string;
+    story: string;
+    authorAvatar?: string;
+    consentGiven: boolean;
+  }) => {
+    await api.createTestimonial(data);
+    await refreshData();
+  };
+
+  const editTestimonial = async (
+    id: string,
+    data: {
+      story?: string;
+      authorRole?: string;
+      affiliation?: string;
+      authorAvatar?: string;
+    }
+  ) => {
+    await api.editTestimonial(id, data);
+    await refreshData();
+  };
+
+  const deleteTestimonial = async (id: string) => {
+    await api.deleteTestimonial(id);
+    await refreshData();
+  };
+
+  const moderateTestimonial = async (id: string, status: 'approved' | 'pending_review') => {
+    await api.moderateTestimonial(id, status);
+    await refreshData();
+  };
+
+  const uploadImage = async (dataUrl: string) => {
+    const res = await api.uploadImage(dataUrl);
+    return res.url;
   };
 
   return (
@@ -290,6 +413,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         listings: sharedData?.listings || [],
         activityLogs: sharedData?.activityLogs || [],
         feedPosts: sharedData?.feedPosts || [],
+        testimonials: sharedData?.testimonials || [],
         notifications: sharedData?.notifications || [],
 
         addReport,
@@ -299,8 +423,16 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         addListing,
         logActivity,
         createPost,
+        editPost,
+        deletePost,
         likePost,
         commentPost,
+        deleteComment,
+        createTestimonial,
+        editTestimonial,
+        deleteTestimonial,
+        moderateTestimonial,
+        uploadImage,
       }}
     >
       {children}
